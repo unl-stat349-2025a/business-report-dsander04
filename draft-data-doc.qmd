@@ -1,3 +1,46 @@
 ---
 title: "Draft: Data Documentation"
+editor: 
+  markdown: 
+    wrap: 72
 ---
+
+### Source 1
+
+#https://www.ncei.noaa.gov/access/coastal-water-temperature-guide/all_table.html#
+This gives average monthly temperature of the water off Dauphin island.
+There are *Information Quality* and *Disclaimer* tabs at the bottom of
+the page, although the *Disclaimer* tab doesn't say anything of
+importance. Information Quality says that the data has to follow
+guidelines from a Treasury and General Government Appropriations act for
+fair and accurate reporting. The data would be used to evaluate the
+likelihood of water temps reaching the 85 degree threshold in different
+months. Unfortunately, it doesn't have daily data, so we'd look
+elsewhere for that. [@nceicoa]
+
+#read fwf to fix the data we read in#
+https://www.ndbc.noaa.gov/obs.shtml Click on link to get to map. Click
+on view history. Then can download any data wanted dpha12024.txt. This
+site has real data every half hour for all of 2024 that comes directly
+from the Dauphin Island site. There's also data from 2021-2023, and from
+January of 2025. I would want to use this data like I said above,
+finding the likelihood of water temps reaching 85 degrees (or 29.444
+degrees Celcius). @nceicoa
+
+```{R}
+library(dplyr)
+dpha <- dpha1h2024 %>% select("#YY","MM","DD","hh","mm","WTMP")
+```
+
+#https://www.sciencedirect.com/science/article/pii/S2211467X24000725
+This is an article about the dangers of climate change on nuclear
+reactors, specifically in the United States. It describes how nuclear
+reactors use water to cool themselves down, and if the water temperature
+is too high, reactors will have to operate at a lower capacity. It also
+shows energy usage in different continents, impacts of lower nuclear
+output, and measures to respond for future risks. @portugal-pereira2024
+
+#https://www.eia.gov/electricity/data/browser/ Has data on electricity
+usage, nuclear power output, and state-by-state breakdowns of important
+power information. This data can help us determine how heavily a shut
+down of the reactor would impact Alabama. @electric
