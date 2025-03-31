@@ -2,3 +2,46 @@
 title: "Draft: Results"
 ---
 
+The section discusses an analysis of the risk of shutdown at nuclear power plants if water used to cool the plant exceeds 85 degrees Fahrenheit (29.44 degrees Celsius). Using public data, we created an analysis to find how often the water surrounding Dauphin Island reaches the 85 degree F threshold and above to help answer our research question. Below is a table of the mean water temperature each month off Dauphin Island [@nceicoaa].
+
+| Month     | Average WTMP Off Dauphin Island |
+|-----------|---------------------------------|
+| January   | 69.8                            |
+| February  | 69.6                            |
+| March     | 70.6                            |
+| April     | 72.7                            |
+| May       | 78.0                            |
+| June      | 83.4                            |
+| July      | 85.7                            |
+| August    | 86.1                            |
+| September | 84.3                            |
+| October   | 80.9                            |
+| November  | 76.1                            |
+| December  | 72.3                            |
+
+The table below gives the number of days each month in which the average water temperature exceeded 85 degrees Fahrenheit. Using data from the NOAA \[ADD citation when this piece of junk decides to finally load\], we found the number of days in each month with an average water temperature of over 29.44 degrees Celsius (85 degrees Fahrenheit). We can see that half of June, all of July, much of August, and just over a week in September recorded an average water temperature above 85. That's 78 days, or 21.37% of the time. Unsurprisingly, these days are during the summer, so the power plant would be operating at half capacity during most of the summer season (is this too Discussiony?)
+
+| Month     | Number of Days With Avg_WTMP over 29.44 Degrees C |
+|-----------|---------------------------------------------------|
+| January   | 0                                                 |
+| February  | 0                                                 |
+| March     | 0                                                 |
+| April     | 0                                                 |
+| May       | 0                                                 |
+| June      | 15                                                |
+| July      | 31                                                |
+| August    | 24                                                |
+| September | 8                                                 |
+| October   | 0                                                 |
+| November  | 0                                                 |
+| December  | 0                                                 |
+
+To better visualize average water temperature over the course of a year, we used the same NOAA data as we did in the previous table. Using the average water temperature from December 2021 to December 2024, we created a bar graph. The dotted red line represents the 85 degree line. During the summer months in the middle of the year, there seems to be many days with an average seawater temperature above the line. We would highlight these as days of interest.
+
+![](images/Screenshot 2025-03-30 224255-01.png)
+
+Discussion:
+
+To determine the risk of overheating, it's important to find the water temperature used in cooling the reactor. At the Dauphin Island reactor, guidelines say the reactor must operate at 50% capacity when surrounding waters reach 85 degrees Fahrenheit. The reactor is designed to use surrounding seawater to cool itself down, but it can't do that properly if the seawater is too warm. To run our analysis, we must find the likelihood of the water reaching above the safety threshold.
+
+Discuss omissions of data (999 degrees) - say only one year had temp for 1/1 and a different year was only one to have temp for 1/2
