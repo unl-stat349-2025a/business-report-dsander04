@@ -27,9 +27,78 @@ January of 2025. I would want to use this data like I said above,
 finding the likelihood of water temps reaching 85 degrees (or 29.444
 degrees Celcius). @nceicoa
 
-```{R}
+```{R setup}
 library(dplyr)
-dpha <- dpha1h2024 %>% select("#YY","MM","DD","hh","mm","WTMP")
+library(tidyr)
+library(ggplot2)
+library(knitr)
+
+dpha2_21 <- dpha2h2021 %>% select("#YY","MM","DD","hh","mm","WTMP") 
+dpha2_21 <- dpha2_21[-1, ]
+dpha2_22 <- dpha2h2022 %>% select("#YY","MM","DD","hh","mm","WTMP") 
+dpha2_22 <- dpha2_22[-1, ]
+dpha2_23 <- dpha2h2023 %>% select("#YY","MM","DD","hh","mm","WTMP") 
+dpha2_23 <- dpha2_23[-1, ]
+dpha2_24 <- dpha2h2024 %>% select("#YY","MM","DD","hh","mm","WTMP") 
+dpha2_24 <- dpha2_24[-1, ]
+
+dpha_combined <- bind_rows(dpha2_21, dpha2_22, dpha2_23, dpha2_24) %>% arrange('#YY', MM, DD, hh, mm, WTMP)
+
+```
+
+Create dataset for av temp
+```{R}
+dpha_av <- dpha_combined %>%
+  mutate(WTMP = as.numeric(WTMP)) %>%
+  filter(WTMP <=100) %>%
+  group_by('#YY', MM, DD) %>%
+  summarize(Avg_WTMP = mean(WTMP, na.rm = TRUE), .groups = "drop")
+
+dpha_over85 <- dpha_av %>%
+  filter(Avg_WTMP>=29.4444)
+
+```
+
+Graph of av. temp by day
+```{R}
+colnames(dpha_av)
+dpha_av <- dpha_av %>%
+  select(-`\"#YY\"`)
+
+ggplot(dpha_av, aes(x = factor(paste(MM, DD, sep = "-")), y = Avg_WTMP)) +
+  geom_bar(stat = "identity", fill = "deepskyblue4") + 
+  geom_hline(yintercept = 29.44, linetype = "dashed", color = "red") +
+  labs(x = "Day", y = "Average WTMP (Deg. Celcius)", title = "Daily Average Water Temp 2021-2024") +
+  theme(axis.text.x = element_blank(),  
+        axis.ticks.x = element_blank(), 
+        plot.title = element_text(hjust = 0.5))
+
+```
+
+Total Days Per Month With Av. Over 29.44
+```{R}
+
+month_count <- dpha_over85 %>%
+  group_by(MM) %>%
+  summarize(Count=n(), .groups="drop")%>%
+  complete(MM=sprintf("%02d", 1:12), fill = list(Count=0))
+
+data(month_count)
+kable(month_count)
+
+```
+
+Total Days Per Month With Obs. > 29.44 in 2024
+```{R}
+dpha2_24_29 <- dpha2_24 %>%
+  filter(WTMP >= 29.44) %>%
+  filter(WTMP <= 50)
+
+month_obs <- dpha2_24_29 %>%
+  group_by(MM) %>%
+  summarize(Days = n_distinct(DD), .groups = "drop")
+
+kable(month_obs, caption="Total Days Per Month With an Obs. > 29.44° C", col.names=c("Month", "Total Days"))
 ```
 
 #https://www.sciencedirect.com/science/article/pii/S2211467X24000725
@@ -44,3 +113,10 @@ output, and measures to respond for future risks. @portugal-pereira2024
 usage, nuclear power output, and state-by-state breakdowns of important
 power information. This data can help us determine how heavily a shut
 down of the reactor would impact Alabama. @electric
+
+#https://world-nuclear.org/information-library/current-and-future-generation/cooling-power-plants
+Talks about a couple of specific instances where water got too hot and
+the plant had to operate on reduced power. The amount of money it cost
+consumers is recorded as well as the temperature threshold. There are a
+couple of examples and all of them have different limits to how hot the
+water can be around their plant. @cooling

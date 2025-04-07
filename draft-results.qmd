@@ -38,7 +38,24 @@ The table below gives the number of days each month in which the average water t
 
 To better visualize average water temperature over the course of a year, we used the same NOAA data as we did in the previous table. Using the average water temperature from December 2021 to December 2024, we created a bar graph. The dotted red line represents the 85 degree line. During the summer months in the middle of the year, there seems to be many days with an average seawater temperature above the line. We would highlight these as days of interest.
 
-![](images/Screenshot 2025-03-30 224255-01.png)
+![](images/Screenshot%202025-03-30%20224255-01.png)
+
+Number of Days with an observation of WTMP being greater than 29.44 in 2024
+
+| Col1      | Col2 |
+|-----------|------|
+| January   | 0    |
+| February  | 0    |
+| March     | 0    |
+| April     | 0    |
+| May       | 7    |
+| June      | 12   |
+| July      | 31   |
+| August    | 31   |
+| September | 13   |
+| October   | 0    |
+| November  | 0    |
+| December  | 0    |
 
 Discussion:
 
