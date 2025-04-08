@@ -2,9 +2,31 @@
 title: "Draft: Intro/Conclusions"
 ---
 
+Do I need to give my opinions/make suggestions? Or just simply report the results?
+
+-   Secondary cooling tower
+
+-   Alternative water source (cooler water underground)
+
+-   Climate change effects
+
+-   Other?
+
+\- Changing the citations? Shouldn't it be author last name and year of publication/last updated?
+
+\- Citation needed after every quote? Even if I say it's from the same article and author?
+
+\- Everything feels so dang repetitive! What's too much repetition and what isn't enough?
+
 Intro
 
-Nuclear power is growing rapidly. As a clean resource, it is generally seen as a positive alternative to fossil fuels. When all precautions are taken, it is better for the environment and safer than many other energy options according to the Nuclear Energy Institute [@whatis].
+Nuclear power is growing rapidly. As a clean resource, it is generally seen as a positive alternative to fossil fuels. When all precautions are taken, it is better for the environment and safer than many other energy options according to the Nuclear Energy Institute [@whatis]. It is also reliable because power can be generated 24 hours a day and year round, as opposed to wind, solar, and hydroelectric energy. Despite all the precautions being taken, there are still risks involved. In many plants, water is used to cool the reactor and transfer thermal heat. This is crucial in a nuclear power plant, but if that water is too hot initially, the plant cannot run efficiently and may damage the surrounding environment. This is what we are trying to study at the Dauphin Island Nuclear Power Plant on Dauphin Island in Alabama. What is the risk of the "cooling water" getting too hot for the plant to operate at full capacity?
+
+FIND GAP IN CURRENT INFO
+
+Multiple studies have found increased water temperature to be detrimental to the operation of a nuclear power plants across the world. The World Nuclear Organization details multiple accounts of this happening in their article on cooling power plants. They say, ". . . had to reduce power at its three Browns Ferry units in Alabama to 50% in order to keep river water temperatures below 32 degrees Celsius. . . Rhine and Neckar River temperatures . . . approached the critical 28 degrees Celsius, and nuclear and coal-fired plants were threatened with closure. In August of 2012 one unit of Millstone power station in Connecticut was closed because the seawater in Long Island Sound exceeded 24 degrees Celsius" [@cooling]. This gives us a good idea of what is to be expected when water temperatures get too high. However, we want to know about the Dauphin Island plant off the southern coast of Alabama. There is little to no information about nuclear power stations in the area that use seawater to cool the reactors, so we hope to fill in that gap and find the risk of a partial shutdown.
+
+Using data from weather stations in the area, we analyzed the probability of the Dauphin Island plant having to reduce their operations due to increased cooling water. Our findings indicated most summer days reach a temperature above the guideline, forcing our plant to reduce operations to 50%. We also found nuclear power to be a large source of power in Alabama, leading to potential power outages if the plant were to be forced to function at 50% output.
 
 Discussion
 
@@ -18,11 +40,11 @@ It may also be useful to our analysis finding exact data on electricity output a
 
 Relation
 
-We build
+We can connect the data we've collected to previous studies to help build a better understanding of water temperature in cooling nuclear reactors. In an article about Climate Resilience, Matthew Bandyk states, ". . . closed the Oyster Creek nuclear plant in New Jersey. . . rather than spend \$800 million developing a new water cooing system in order to reduce the amount of heated water the plant discharged into the local bay. . . harming the aquatic ecosystem" [@fornucl]. If water temperatures become too consistently high, it's possible the Dauphin Island plant may have a future similar to the Oyster Creek plant. The article doesn't just focus on one power plant though. They found, "there were 17 instances where a U.S. nuclear plant had to reduce power and stay running at a diminished level until hot weather subsided, according to an NRC spokesperson. In 2020, there were 25 such instances."\[DO I NEED A CITATION HERE?\] This data signals shutdowns due to extreme heat are not as rare as they may initially seem.
 
 This use of water to cool nuclear power plants is not just exclusive to Dauphin Island, Alabama, or even the United States. Worldwide, this same system is used. Different countries or regions may have different guidelines on ideal water temperature, but the idea and consequences are the same. For example, the World Nuclear Association writes about the Brown's Ferry Nuclear Power Plant in Northern Alabama, "In mid 2010, TVA had to reduce power at its three Brown's Ferry Units in Alabama to 50% in order to keep river water temperatures below 32 degrees C, at a cost to some \$50 million to customers" [@cooling]. Worldwide, almost 10% of all energy used comes from the 440 nuclear power plants across the globe [@nuclear]. The World Nuclear Association states that some countries like France, Hungary, or Ukraine, rely on nuclear energy for more than half of their electricity. In these cases, the threat of operating at half capacity is more daunting, as it can effect much of a country's power output.
 
-Despite the research we've done on the topic, there are multiple opportunities to build on the knowledge we've gained. Using local and national guidelines, you can research the probability of partial shutdowns at any nuclear power plant across the world. It may be particularly helpful to research France's nuclear power plants as they supply over 70% of the country's power. A major heat wave and increase in surrounding water temperatures could lead to ruinous power outages across the country. Researching the probability of these outages and the effects they could have is a great first step to mitigating a country-wide disaster.
+Despite the research we've done on the topic, there are multiple opportunities to build on the knowledge we've gained. Using local and national guidelines, one can research the probability of partial shutdowns at any nuclear power plant across the world. It may be particularly helpful to research France's nuclear power plants as they supply over 70% of the country's electrical output. A major heat wave and increase in surrounding water temperatures could lead to ruinous power outages across the country. Researching the probability of these outages and the effects they could have is a great first step to mitigating a country-wide disaster.
 
 Due to increasing concern for the effects of climate change on environments, we would also recommend further research be done on how the Dauphin Island power plant may be effected. If water temperature is increasing on average year-over-year, the power plant could be at risk for longer periods of working at 50% capacity, further straining power supplies in Alabama. Prevention and alleviation tactics would be the best focuses of future study.
 
