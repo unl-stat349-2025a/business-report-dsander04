@@ -27,14 +27,72 @@ January of 2025. I would want to use this data like I said above,
 finding the likelihood of water temps reaching 85 degrees (or 29.444
 degrees Celcius). @nceicoa
 
+```{R}
+setwd("C:/Users/Dominic Sander/Downloads/Stat 349")
+library(readr)
+dpha2h2012 <- read_table("dpha1h2012.txt")
+dpha2h2013 <- read_table("dpah1h2013.txt")
+dpha2h2014 <- read_table("dpha1h2014.txt")
+dpha2h2015 <- read_table("dpha1h2105.txt")
+dpha2h2016 <- read_table("dpha2h2016.txt")
+dpha2h2017 <- read_table("dpha2h2017.txt")
+dpha2h2018 <- read_table("dpha2h2018.txt")
+dpha2h2019 <- read_table("dpha2h2019.txt")
+dpha2h2020 <- read_table("dpha2h2020.txt")
+X42012h2021 <- read_table("42012h2021.txt")
+dpha2h2022 <- read_table("dpha2h2022.txt")
+dpha2h2023 <- read_table("dpha2h2023.txt")
+dpha2h2024 <- read_table("dpha2h2024.txt")
+
+
+```
+
+
 ```{R setup}
 library(dplyr)
 library(tidyr)
 library(ggplot2)
 library(knitr)
 
-dpha2_21 <- dpha2h2021 %>% select("#YY","MM","DD","hh","mm","WTMP") 
-dpha2_21 <- dpha2_21[-1, ]
+dpha2_12 <- dpha2h2012 %>% select("#YY","MM","DD","hh","mm","OTMP") %>%
+   rename(WTMP=OTMP)
+dpha2_12 <- dpha2_12[-1, ]
+
+dpha2_13 <- dpha2h2013 %>% select("#YY","MM","DD","hh","mm","OTMP") %>%
+   rename(WTMP=OTMP)
+dpha2_13 <- dpha2_13[-1, ]
+
+dpha2_14 <- dpha2h2014 %>% select("#YY","MM","DD","hh","mm","OTMP") %>%
+   rename(WTMP=OTMP)
+dpha2_14 <- dpha2_14[-1, ]
+
+dpha2_15 <- dpha2h2015 %>% select("#YY","MM","DD","hh","mm","OTMP") %>%
+   rename(WTMP=OTMP)
+dpha2_15 <- dpha2_15[-1, ]
+
+dpha2_16 <- dpha2h2016 %>% select("#YY","MM","DD","hh","mm","OTMP") %>%
+   rename(WTMP=OTMP)
+dpha2_16 <- dpha2_16[-1, ] 
+
+dpha2_17 <- dpha2h2017 %>% select("#YY","MM","DD","hh","mm","OTMP") %>%
+  rename(WTMP=OTMP)
+dpha2_17 <- dpha2_17[-1, ]
+
+dpha2_18 <- dpha2h2018 %>% select("#YY","MM","DD","hh","mm","OTMP") %>%
+  rename(WTMP=OTMP)
+dpha2_18 <- dpha2_18[-1, ]
+
+dpha2_19 <- dpha2h2019 %>% select("#YY","MM","DD","hh","mm","OTMP") %>%
+  rename(WTMP=OTMP)
+dpha2_19 <- dpha2_19[-1, ]
+
+dpha2_20 <- dpha2h2020 %>% select("#YY","MM","DD","hh","mm","OTMP") %>%
+  rename(WTMP=OTMP)
+dpha2_20 <- dpha2_20[-1, ]
+
+X42012h_21 <- X42012h2021 %>% select("#YY","MM","DD","hh","mm","WTMP")
+X42012h_21 <- X42012h_21[-1, ]
+
 dpha2_22 <- dpha2h2022 %>% select("#YY","MM","DD","hh","mm","WTMP") 
 dpha2_22 <- dpha2_22[-1, ]
 dpha2_23 <- dpha2h2023 %>% select("#YY","MM","DD","hh","mm","WTMP") 
@@ -42,7 +100,10 @@ dpha2_23 <- dpha2_23[-1, ]
 dpha2_24 <- dpha2h2024 %>% select("#YY","MM","DD","hh","mm","WTMP") 
 dpha2_24 <- dpha2_24[-1, ]
 
-dpha_combined <- bind_rows(dpha2_21, dpha2_22, dpha2_23, dpha2_24) %>% arrange('#YY', MM, DD, hh, mm, WTMP)
+dpha_combined <- bind_rows(dpha2_12, dpha2_13, dpha2_14, dpha2_15, dpha2_16, dpha2_17, dpha2_18, dpha2_19, dpha2_20, X42012h_21, dpha2_22, dpha2_23, dpha2_24
+) %>%
+  arrange(`#YY`, MM, DD, hh, mm) %>%
+  filter(WTMP <=40)
 
 ```
 
@@ -50,7 +111,7 @@ Create dataset for av temp
 ```{R}
 dpha_av <- dpha_combined %>%
   mutate(WTMP = as.numeric(WTMP)) %>%
-  filter(WTMP <=100) %>%
+  filter(WTMP <=40) %>%
   group_by('#YY', MM, DD) %>%
   summarize(Avg_WTMP = mean(WTMP, na.rm = TRUE), .groups = "drop")
 
@@ -68,7 +129,7 @@ dpha_av <- dpha_av %>%
 ggplot(dpha_av, aes(x = factor(paste(MM, DD, sep = "-")), y = Avg_WTMP)) +
   geom_bar(stat = "identity", fill = "deepskyblue4") + 
   geom_hline(yintercept = 29.44, linetype = "dashed", color = "red") +
-  labs(x = "Day", y = "Average WTMP (Deg. Celcius)", title = "Daily Average Water Temp 2021-2024") +
+  labs(x = "Day", y = "Av. Water Temp °C", title = "Daily Av. Water Temp 2012-2024") +
   theme(axis.text.x = element_blank(),  
         axis.ticks.x = element_blank(), 
         plot.title = element_text(hjust = 0.5))
@@ -100,6 +161,88 @@ month_obs <- dpha2_24_29 %>%
 
 kable(month_obs, caption="Total Days Per Month With an Obs. > 29.44° C", col.names=c("Month", "Total Days"))
 ```
+
+Total days per year with daily max temp above 29.44
+```{R}
+library(lubridate)
+dpha_combined <- dpha_combined %>%
+  mutate(
+    Date = make_date(year = as.integer(`#YY`), month = as.integer(MM), day = as.integer(DD))
+  )
+
+year_above_29 <- dpha_combined %>%
+  filter(WTMP >= 29.44, WTMP <= 50) %>%
+  group_by(Year = year(Date)) %>%
+  summarise(
+    Days_Above_29_44C = n_distinct(Date), 
+    Max_temp = max(WTMP, na.rm=TRUE),
+    .groups = "drop",
+    )
+```
+
+
+Predictive model for next five years
+```{R}
+water_model <- lm(Days_Above_29_44C ~ Year, data = year_above_29)
+
+summary(water_model)  
+
+
+future_data <- data.frame(Year = seq(max(year_above_29$Year) + 1, by = 1, length.out = 5))
+
+# Predict with confidence intervals
+future_predictions <- predict(water_model, newdata = future_data, interval = "prediction")
+
+# Combine predictions with years
+forecast <- cbind(future_data, round(as.data.frame(future_predictions), 1))
+names(forecast) <- c("Year", "Predicted_Hot_Days", "Lower", "Upper")
+
+print(forecast)
+```
+
+Graphs for predictions - 
+```{R}
+year_above_29 <- year_above_29 %>%
+  mutate(
+    Max_temp = as.numeric(Max_temp),
+    Days_Above_29_44C = as.numeric(Days_Above_29_44C)
+  )
+
+# Simple plot
+ggplot(year_above_29, aes(x = Year)) +
+  geom_bar(aes(y = Days_Above_29_44C), stat = "identity", fill = "deepskyblue4") 
+  
+```
+
+Max temp per year
+```{R}
+water_model_max <- lm(Max_temp ~ Year, data = year_above_29)
+
+summary(water_model_max)  
+
+
+future_data_max <- data.frame(Year = seq(max(year_above_29$Year) + 1, by = 1, length.out = 5))
+
+# Predict with confidence intervals
+future_predictions_max <- predict(water_model_max, newdata = future_data_max, interval = "prediction")
+
+# Combine predictions with years
+forecast_max <- cbind(future_data_max, round(as.data.frame(future_predictions_max), 1))
+names(forecast_max) <- c("Year", "Predicted Highest Temp", "Lower", "Upper")
+
+print(forecast_max)
+```
+
+Graph of max temp per year
+```{R}
+ggplot(year_above_29, aes(x=Year, y=Max_temp)) +
+  geom_line() +
+  geom_point(color = "deepskyblue4") +
+  labs(x = "Year", y = "Max. Water Temp °C", title = "Max. Yearly Water Temp 2012-2024") 
+  
+```
+
+
 
 #https://www.sciencedirect.com/science/article/pii/S2211467X24000725
 This is an article about the dangers of climate change on nuclear

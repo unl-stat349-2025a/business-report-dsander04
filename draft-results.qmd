@@ -2,6 +2,12 @@
 title: "Draft: Results"
 ---
 
+Methods
+
+No data collection was done in our observational study. Everything was collected from reliable outside sources such as the NOAA and NCEI. This information was gathered by weather posts in and around Dauphin Island, measuring ambient water temperature and other important meteorological observations. While not all days hadthe same number of water temperature observations, we were able to use daily averages to make observations and conclusions about the data.
+
+In our analysis we used the software "R" to clean, visualize, and analyze our information. We created multiple tables to examine daily average temperatures, yearly maximum temperatures, and prevalence of days that exceed our thresholds. We also graphed some results to make them more digestible for a wider audience.
+
 The section discusses an analysis of the risk of shutdown at nuclear power plants if water used to cool the plant exceeds 85 degrees Fahrenheit (29.44 degrees Celsius). Using public data, we created an analysis to find how often the water surrounding Dauphin Island reaches the 85 degree F threshold and above to help answer our research question. Below is a table of the mean water temperature each month off Dauphin Island [@nceicoaa].
 
 | Month     | Average WTMP Off Dauphin Island |
@@ -60,5 +66,3 @@ Number of Days with an observation of WTMP being greater than 29.44 in 2024
 Discussion:
 
 To determine the risk of overheating, it's important to find the water temperature used in cooling the reactor. At the Dauphin Island reactor, guidelines say the reactor must operate at 50% capacity when surrounding waters reach 85 degrees Fahrenheit. The reactor is designed to use surrounding seawater to cool itself down, but it can't do that properly if the seawater is too warm. To run our analysis, we must find the likelihood of the water reaching above the safety threshold.
-
-Discuss omissions of data (999 degrees) - say only one year had temp for 1/1 and a different year was only one to have temp for 1/2

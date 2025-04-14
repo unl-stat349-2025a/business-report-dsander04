@@ -1,3 +1,9 @@
 ---
 title: "Draft: Executive Summary"
 ---
+
+The Dauphin Island Nuclear Power Plant supplies electricity to hundreds of thousands of people and businesses across Alabama. Multiple studies have shown climate change to increase the average air temperature across the globe, in turn increasing ambient water temperature. This increasing water temperature in the Gulf of Mexico around Dauphin Island could harm the plant's ability to run at full capacity. In fact, any time the surrounding water temperature reaches 85°F (29.44°C), the plant must run at half power to reduce negative environmental effects. 
+Climate resilience strategies are the best way to ensure this plant continues operating efficiently. We recommend doing more research on procedures that can mitigate the risk, such as sourcing colder water, finding new methods to reuse water, and increasing turbine efficiency.
+Our study found there to be a significant chance of a partial shutdown every year for the next five years. Generated confidence intervals showed years 2025-2029 are expected to have between 35 and 169 days that reach the 29.44°C threshold, forcing the plant to reduce operations. [Text box of prejected days] 
+Additionally, the estimated maximum water temperature reached is expected to increase year over year. However, the intervals do include temperatures that are lower than the 2024 maximum. 
+We unfortunately cannot make a decision based on these intervals. 
