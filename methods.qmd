@@ -1,0 +1,12 @@
+---
+title: "methods"
+format: html
+---
+
+# Methods
+
+No data collection was done in our observational study. Everything we collected came from reliable outside sources such as the NOAA and NCEI. This information was gathered by weather posts in and around Dauphin Island, measuring ambient water temperature and other important meteorological observations. While not all days had the same number of water temperature observations, we were able to use daily averages to make observations and conclusions about the data.
+
+In our analysis we used the software "R" to clean, visualize, and analyze our information. We created multiple tables to examine daily average temperatures, yearly maximum temperatures, and prevalence of days that exceed our thresholds. We also graphed some results to make them more digestible for a wider audience.
+
+The section discusses an analysis of the risk of shutdown at nuclear power plants if water used to cool the plant exceeds 85 degrees Fahrenheit (29.44 degrees Celsius). Using public data, we created an analysis to find how often the water surrounding Dauphin Island reaches the 85 degree F threshold and above to help answer our research question. Below is a table of the mean water temperature each month off Dauphin Island [@nceicoaa].

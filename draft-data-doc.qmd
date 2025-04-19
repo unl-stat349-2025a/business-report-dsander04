@@ -24,7 +24,7 @@ on view history. Then can download any data wanted dpha12024.txt. This
 site has real data every half hour for all of 2024 that comes directly
 from the Dauphin Island site. There's also data from 2021-2023, and from
 January of 2025. I would want to use this data like I said above,
-finding the likelihood of water temps reaching 85 degrees (or 29.444
+finding the likelihood of water temps reaching 85 degrees (or 29.44
 degrees Celcius). @nceicoa
 
 ```{R}

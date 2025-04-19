@@ -4,7 +4,7 @@ title: "Draft: Results"
 
 Methods
 
-No data collection was done in our observational study. Everything was collected from reliable outside sources such as the NOAA and NCEI. This information was gathered by weather posts in and around Dauphin Island, measuring ambient water temperature and other important meteorological observations. While not all days hadthe same number of water temperature observations, we were able to use daily averages to make observations and conclusions about the data.
+No data collection was done in our observational study. Everything was collected from reliable outside sources such as the NOAA and NCEI. This information was gathered by weather posts in and around Dauphin Island, measuring ambient water temperature and other important meteorological observations. While not all days had the same number of water temperature observations, we were able to use daily averages to make observations and conclusions about the data.
 
 In our analysis we used the software "R" to clean, visualize, and analyze our information. We created multiple tables to examine daily average temperatures, yearly maximum temperatures, and prevalence of days that exceed our thresholds. We also graphed some results to make them more digestible for a wider audience.
 
@@ -44,7 +44,7 @@ The table below gives the number of days each month in which the average water t
 
 To better visualize average water temperature over the course of a year, we used the same NOAA data as we did in the previous table. Using the average water temperature from December 2021 to December 2024, we created a bar graph. The dotted red line represents the 85 degree line. During the summer months in the middle of the year, there seems to be many days with an average seawater temperature above the line. We would highlight these as days of interest.
 
-![](images/Screenshot%202025-03-30%20224255-01.png)
+![](images/clipboard-3459236136.png)
 
 Number of Days with an observation of WTMP being greater than 29.44 in 2024
 
