@@ -1,63 +1,27 @@
 # Executive Summary {.unnumbered}
 
 ## Intro
-The Dauphin Island Nuclear Power Plant supplies electricity to hundreds of thousands of people and businesses across Alabama. Multiple studies have shown climate change to increase the average air temperature across the globe, in turn increasing ambient water temperature. This increasing water temperature in the Gulf of Mexico around Dauphin Island could harm the plant's ability to run at full capacity. In fact, any time the surrounding water temperature reaches 85°F (29.44°C), the plant must run at half power to reduce negative environmental effects. 
+
+The Dauphin Island Nuclear Power Plant supplies electricity to hundreds of thousands of people and businesses across Alabama. Multiple studies have shown climate change to increase the average air temperature across the globe, in turn increasing ambient water temperature. This increasing water temperature in the Gulf of Mexico around Dauphin Island could harm the plant's ability to run at full capacity. In fact, any time the surrounding water temperature reaches 85°F (29.44°C), the plant is required to run at half power to reduce negative environmental effects.
 
 ## Methods
-We used data from weather stations in the Dauphin Island area. These stations collected atmospheric data as well as water temperature data, the latter being what we extracted and included in our analyses. To clean, analyze, and present our data, we used the software package "R." In doing so, we created prjections, confidence intervals, and graphics that give insights into answering our research question. 
+
+We conducted an observational study using available temperature data from the NOAA [@NDBC] and NCEI [@nceicoa2025]. These stations collected atmospheric data as well as water temperature data, the latter being what we extracted and included in our analyses. To clean, analyze, and present our data, we used the software package "R." In doing so, we created projections, confidence intervals, and graphics that give insights into answering our research question.
 
 ## Results
-Our study found there to be a significant chance of a partial shutdown every year for the next five years. Generated confidence intervals showed years 2025-2029 are expected to have between 35 and 169 days that reach the 29.44°C threshold, forcing the plant to reduce operations. [Text box of projected days] Additionally, the estimated maximum water temperature reached is expected to increase year over year. However, the intervals do include temperatures that are lower than the 2024 maximum. Therefore, we unfortunately cannot make a decision based on these intervals.
+
+Our study found there to be a significant chance of a partial shutdown every year for the next five years. Generated confidence intervals showed years 2025-2029 are expected to have between 35 and 169 days that reach the 85°F threshold, forcing the plant to reduce operations.
+
+| Year | Predicted Number of Days | Lower Confidence Limit | Upper Confidence Limit |
+|-----------------|-------------------|------------------|------------------|
+| 2025 | 99.3                     | 40.8                   | 157.8                  |
+| 2026 | 100.2                    | 39.9                   | 160.5                  |
+| 2027 | 101.1                    | 38.9                   | 163.3                  |
+| 2028 | 101.9                    | 37.6                   | 166.2                  |
+| 2029 | 102.8                    | 36.2                   | 169.3                  |
+
+: The number of projected days that reach 85°F over the next five years. Since each lower confidence limit is above 30, we would expect there to be at least 30 days every year that would require the plant to reduce operations. Additionally, we found the estimated maximum water temperature reached is expected to increase year over year. However, the intervals include temperatures that are lower than the 2024 maximum. Therefore, we unfortunately cannot make a decision based on those intervals.
 
 ## Discussion
-Based on our results, climate resilience strategies are the best way to ensure this plant continues operating efficiently. We recommend doing more research on procedures that can mitigate the risk, such as sourcing colder water, finding new methods to reuse water, and increasing turbine efficiency. If no changes are made, many people and businesses in Alabama could face challenges in being able to use electricity. 
 
----
-
-You are a data scientist for a mid-sized business, in a small group of 3-4 data scientists. You've been tasked with creating a report evaluating a scenario for your business. 
-Your colleagues will also be evaluating the same scenario, and your reports will be used in aggregate to determine a consensus (or lack thereof) on the company's action. 
-The reports will also be used to inform downsizing that is rumored to be coming - you want to ensure your report is better than your peers so that you aren't as easy to cut. 
-
-You may talk to your peers who are assigned the same scenario, but you do not want to collaborate too closely, lest you both become targets of the rumored layoffs. 
-
-
----
-
-I've scaffolded this report for you to make this process easier - as we talk about different sections of a report in class and read about how to create similar sections, you will practice by writing the equivalent section of your report.
-
-
-The basic steps for this task are as follows:
-
-- Identify the research question from the business question
-
-- Identify data set(s) which are (1) publicly available (you don't have a budget to pay for private data) and (2) relevant to your task
-
-    - (HW Week 6) Document your data sets in `draft-data-doc.qmd`
-
-- Conduct a statistical analysis to support your answer to your research and business questions
-
-    - Write a methods section for your business report corresponding to your statistical analysis
-
-    - (HW Week 9) Draft of results section of business report with relevant graphics/visual aids in `draft-results.qmd`
-    
-- Write your report
-
-    - (HW Week 10) Draft of Intro/Conclusion sections in `draft-intro-conclusions.qmd`
-    
-    - (HW Week 11) Draft of Executive summary section in `draft-exec-summary.qmd`
-    
-- Revise your report
-
-    - (HW Week 12 -- not turned in) Revise your report
-    
-    - (HW Week 13) - Rough draft of report due. Create one or more qmd files for your report (you can overwrite or delete intro.qmd and summary.qmd), include the names of each file (in order) in `_quarto.yml`. You should use references (edit references.bib and use pandoc citations). Make sure your report compiles and looks reasonable in both html and pdf. 
-    
-    - Develop a presentation to go along with your report (Week 13). Create slides for your report using quarto. 
-
-- Peer revise reports
-
-    - Peer revise reports
-    
-    - (HW Week 14) - Make edits to your report from comments received from peer review
-
-- Final report & presentation due
+Based on our results, climate resilience strategies are the best way to ensure this plant continues operating efficiently. We recommend doing more research on procedures that can mitigate the risk, such as sourcing colder water, finding new methods to reuse water, and increasing turbine efficiency. If no changes are made, many people and businesses in Alabama could face challenges in being able to use electricity.

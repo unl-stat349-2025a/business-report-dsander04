@@ -3,10 +3,10 @@ project:
   output-dir: docs
 
 book:
-  title: "Evaluation of Water Temperature at the Dauphin Island Nuclear Power Plant"
+  title: "Too Hot to Handle: An Evaluation of Water Temperature at the Dauphin Island Nuclear Power Plant"
   author: "Dominic Sander"
   page-footer:
-    left: "Copyright 2025, Author Name"
+    left: "Copyright 2025, Dominic Sander"
   chapters:
     - index.qmd
     - intro.qmd
@@ -15,9 +15,9 @@ book:
     - references.qmd
   appendices:
     - draft-data-doc.qmd
+    - draft-exec-summary.qmd
     - draft-results.qmd
     - draft-intro-conclusions.qmd
-    - draft-exec-summary.qmd
 
 bibliography: references.bib
 

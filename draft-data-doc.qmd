@@ -50,7 +50,6 @@ dpha2h2024 <- read_table("dpha2h2024.txt")
 
 ```{R setup}
 library(dplyr)
-library(tidyr)
 library(ggplot2)
 library(knitr)
 
