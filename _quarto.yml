@@ -24,6 +24,8 @@ bibliography: references.bib
 
 execute:
     error: true
+    message: false
+    warning: false
 
 format:
   html:
