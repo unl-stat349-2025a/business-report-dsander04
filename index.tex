@@ -218,7 +218,7 @@
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same} % disable monospaced font for URLs
 \hypersetup{
-  pdftitle={Evaluation of Water Temperature at the Dauphin Island Nuclear Power Plant},
+  pdftitle={Too Hot to Handle: An Evaluation of Water Temperature at the Dauphin Island Nuclear Power Plant},
   pdfauthor={Dominic Sander},
   colorlinks=true,
   linkcolor={blue},
@@ -228,8 +228,8 @@
   pdfcreator={LaTeX via pandoc}}
 
 
-\title{Evaluation of Water Temperature at the Dauphin Island Nuclear
-Power Plant}
+\title{Too Hot to Handle: An Evaluation of Water Temperature at the
+Dauphin Island Nuclear Power Plant}
 \author{Dominic Sander}
 \date{}
 
@@ -250,211 +250,228 @@ Power Plant}
 
 \markboth{Executive Summary}{Executive Summary}
 
-Intro The Dauphin Island Nuclear Power Plant supplies electricity to
-hundreds of thousands of people and businesses across Alabama. Multiple
-studies have shown climate change to increase the average air
-temperature across the globe, in turn increasing ambient water
-temperature. This increasing water temperature in the Gulf of Mexico
-around Dauphin Island could harm the plant's ability to run at full
-capacity. In fact, any time the surrounding water temperature reaches
-85°F (29.44°C), the plant must run at half power to reduce negative
-environmental effects.
+\section*{Intro}\label{intro}
+\addcontentsline{toc}{section}{Intro}
 
-Methods We used data from weather stations in the Dauphin Island area.
-These stations collected atmospheric data as well as water temperature
-data, the latter being what we extracted and included in our analyses.
-To clean, analyze, and present our data, we used the software package
-``R.'' In doing so, we created prjections, confidence intervals, and
-graphics that give insights into answering our research question.
+\markright{Intro}
 
-Results Our study found there to be a significant chance of a partial
-shutdown every year for the next five years. Generated confidence
+The Dauphin Island Nuclear Power Plant supplies electricity to hundreds
+of thousands of people and businesses across Alabama. Multiple studies
+have shown climate change to increase the average air temperature across
+the globe, in turn increasing ambient water temperature. This increasing
+water temperature in the Gulf of Mexico around Dauphin Island could harm
+the plant's ability to run at full capacity. In fact, any time the
+surrounding water temperature reaches 85°F (29.44°C), the plant is
+required to run at half power to reduce negative environmental effects.
+
+\section*{Methods}\label{methods}
+\addcontentsline{toc}{section}{Methods}
+
+\markright{Methods}
+
+We conducted an observational study using available temperature data
+from the NOAA (US Department of Commerce and Administration, n.d.) and
+NCEI ({``NCEI Coastal Water Temperature Guide - All Coastal Regions
+Table,''} n.d.). These stations collected atmospheric data as well as
+water temperature data, the latter being what we extracted and included
+in our analyses. To clean, analyze, and present our data, we used the
+software program ``R Studio'' ({``RStudio Education,''} n.d.). In doing
+so, we created projections, confidence intervals, and graphics that give
+insights into answering our research question.
+
+\section*{Results}\label{results}
+\addcontentsline{toc}{section}{Results}
+
+\markright{Results}
+
+Our study found there to be a significant chance of a partial shutdown
+every year for the next five years. Generated 95 percent confidence
 intervals showed years 2025-2029 are expected to have between 35 and 169
-days that reach the 29.44°C threshold, forcing the plant to reduce
-operations. {[}Text box of projected days{]} Additionally, the estimated
-maximum water temperature reached is expected to increase year over
-year. However, the intervals do include temperatures that are lower than
-the 2024 maximum. Therefore, we unfortunately cannot make a decision
-based on these intervals.
+days that reach the 85°F threshold, forcing the plant to reduce
+operations.
 
-Discussion Based on our results, climate resilience strategies are the
-best way to ensure this plant continues operating efficiently. We
-recommend doing more research on procedures that can mitigate the risk,
-such as sourcing colder water, finding new methods to reuse water, and
-increasing turbine efficiency. If no changes are made, many people and
-businesses in Alabama could face challenges in being able to use
-electricity.
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2466}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2603}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2466}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2466}}@{}}
+\caption{Figure 1: This table gives the number of projected days that
+reach 85°F over the next five years. Since each lower confidence limit
+is above 30, we would expect there to be at least 30 days every year
+that would require the plant to reduce operations. Additionally, we
+found the estimated maximum water temperature reached is expected to
+increase year over year. However, the intervals include temperatures
+that are lower than the 2024 maximum. Therefore, we unfortunately cannot
+make a decision based on those intervals.}\tabularnewline
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Year
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Predicted Number of Days
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Lower Confidence Limit
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Upper Confidence Limit
+\end{minipage} \\
+\midrule\noalign{}
+\endfirsthead
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Year
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Predicted Number of Days
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Lower Confidence Limit
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Upper Confidence Limit
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+2025 & 99.3 & 40.8 & 157.8 \\
+2026 & 100.2 & 39.9 & 160.5 \\
+2027 & 101.1 & 38.9 & 163.3 \\
+2028 & 101.9 & 37.6 & 166.2 \\
+2029 & 102.8 & 36.2 & 169.3 \\
+\end{longtable}
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+\section*{Discussion}\label{discussion}
+\addcontentsline{toc}{section}{Discussion}
 
-You are a data scientist for a mid-sized business, in a small group of
-3-4 data scientists. You've been tasked with creating a report
-evaluating a scenario for your business. Your colleagues will also be
-evaluating the same scenario, and your reports will be used in aggregate
-to determine a consensus (or lack thereof) on the company's action. The
-reports will also be used to inform downsizing that is rumored to be
-coming - you want to ensure your report is better than your peers so
-that you aren't as easy to cut.
+\markright{Discussion}
 
-You may talk to your peers who are assigned the same scenario, but you
-do not want to collaborate too closely, lest you both become targets of
-the rumored layoffs.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-I've scaffolded this report for you to make this process easier - as we
-talk about different sections of a report in class and read about how to
-create similar sections, you will practice by writing the equivalent
-section of your report.
-
-The basic steps for this task are as follows:
-
-\begin{itemize}
-\item
-  Identify the research question from the business question
-\item
-  Identify data set(s) which are (1) publicly available (you don't have
-  a budget to pay for private data) and (2) relevant to your task
-
-  \begin{itemize}
-  \tightlist
-  \item
-    (HW Week 6) Document your data sets in \texttt{draft-data-doc.qmd}
-  \end{itemize}
-\item
-  Conduct a statistical analysis to support your answer to your research
-  and business questions
-
-  \begin{itemize}
-  \item
-    Write a methods section for your business report corresponding to
-    your statistical analysis
-  \item
-    (HW Week 9) Draft of results section of business report with
-    relevant graphics/visual aids in \texttt{draft-results.qmd}
-  \end{itemize}
-\item
-  Write your report
-
-  \begin{itemize}
-  \item
-    (HW Week 10) Draft of Intro/Conclusion sections in
-    \texttt{draft-intro-conclusions.qmd}
-  \item
-    (HW Week 11) Draft of Executive summary section in
-    \texttt{draft-exec-summary.qmd}
-  \end{itemize}
-\item
-  Revise your report
-
-  \begin{itemize}
-  \item
-    (HW Week 12 -- not turned in) Revise your report
-  \item
-    (HW Week 13) - Rough draft of report due. Create one or more qmd
-    files for your report (you can overwrite or delete intro.qmd and
-    summary.qmd), include the names of each file (in order) in
-    \texttt{\_quarto.yml}. You should use references (edit
-    references.bib and use pandoc citations). Make sure your report
-    compiles and looks reasonable in both html and pdf.
-  \item
-    Develop a presentation to go along with your report (Week 13).
-    Create slides for your report using quarto.
-  \end{itemize}
-\item
-  Peer revise reports
-
-  \begin{itemize}
-  \item
-    Peer revise reports
-  \item
-    (HW Week 14) - Make edits to your report from comments received from
-    peer review
-  \end{itemize}
-\item
-  Final report \& presentation due
-\end{itemize}
+Based on our results, climate resilience strategies are the best way to
+ensure this plant continues operating efficiently. We recommend doing
+more research on procedures that can mitigate the risk, such as sourcing
+colder water, finding new methods to reuse water, and increasing turbine
+efficiency. If no changes are made, many people and businesses in
+Alabama could face challenges in being able to use electricity.
 
 \bookmarksetup{startatroot}
 
 \chapter{Introduction}\label{introduction}
 
 There are many well-known risks involved with nuclear power generation,
-one of those being overheating of the cooling system. In many plants,
-water is used to cool the reactor and transfer thermal heat that can be
-transformed into electricity. This is crucial in a nuclear power plant,
-but if that water is too hot initially, the plant cannot run efficiently
-and may damage the surrounding environment. This is what we are trying
-to study at the Dauphin Island Nuclear Power Plant on Dauphin Island in
-Alabama. What is the risk of the ``cooling water'' getting too hot for
-the plant to operate at full capacity?
+one of those being overheating of water used in the reactor cooling
+system. This is what is being studied at the Dauphin Island Nuclear
+Power Plant on Dauphin Island in Alabama. What is the risk of the
+``cooling water'' getting too hot for the plant to operate at full
+capacity? We also want to understand the potential consequences of the
+water being too hot. Could elevated water temperature harm the
+surrounding environment? Would Alabama's power grid struggle to maintain
+power levels? How could any of these negative results be minimized or
+prevented?
 
 Multiple studies have found increased water temperature to be
-detrimental to the operation of a nuclear power plants across the world.
+detrimental to the operation of nuclear power plants across the world.
 The World Nuclear Organization details multiple accounts of this
-happening in their article on cooling power plants. They say, ``. . .
-had to reduce power at its three Browns Ferry units in Alabama to 50\%
-in order to keep river water temperatures below 32 degrees Celsius. . .
-Rhine and Neckar River temperatures . . . approached the critical 28
-degrees Celsius, and nuclear and coal-fired plants were threatened with
-closure. In August of 2012 one unit of Millstone power station in
-Connecticut was closed because the seawater in Long Island Sound
-exceeded 24 degrees Celsius'' ({``Cooling Power Plants - World Nuclear
-Association,''} n.d.). This gives us a good idea of what is to be
-expected when water temperatures get too high. However, we want to know
-about the Dauphin Island plant off the southern coast of Alabama. There
-is little to no information about nuclear power stations in the area
-that use seawater to cool the reactors, so we hope to fill in that gap
-and find the risk of a partial shutdown.
+happening in their article on cooling power plants. They say they had to
+operate three reactors at 50\% capacity at the Brown's Ferry plant in
+Alabama to ensure river water temperatures didn't exceed 89.6°F
+({``Cooling Power Plants - World Nuclear Association,''} n.d.). In
+France, the Rhine and Neckar river temperatures approached 82.4°F, so
+government officials threatened to temporarily close the reactors on
+those rivers. A unit within a nuclear plant in Connecticut was even
+closed permanently because Long Island Sound seawater temperatures
+continually exceeded 75.2°F. These examples give us good insight into
+what is to be expected when water temperatures get too high. However, we
+want to know about the Dauphin Island plant off the southern coast of
+Alabama. There is little to no information about nuclear power stations
+in the area that use seawater to cool the reactors, so we hope to fill
+in that gap and find the risk of a partial shutdown.
 
 Using data from weather stations in the area, we analyzed the
 probability of the Dauphin Island plant having to reduce their
 operations due to increased cooling water. Our findings indicated most
 summer days reach a temperature above the guideline, forcing our plant
-to reduce operations to half . 95 percent confidence intervals suggest
-there will be a minimum of 30 days worth of shutdowns each of the next
-five years, with the potential for up to 170 days. We also found nuclear
-power to be a large source of power in Alabama, leading to potential
-power outages if the plant were to be forced to function at 50\% output.
-
-\#This is a book created from markdown and executable code. \#See Knuth
-(1984) for additional discussion of literate programming. - Can I delete
-these?
-
-\bookmarksetup{startatroot}
-
-\chapter{methods}\label{methods}
+to reduce operations to half of what is normally expected. 95 percent
+confidence intervals suggest there will be a minimum of 30 days worth of
+shutdowns each of the next five years, with the potential for up to 170
+days. We also found nuclear power to be a large source of power in
+Alabama, leading to potential power outages if the plant were to be
+forced to function at 50 percent output.
 
 \bookmarksetup{startatroot}
 
 \chapter{Methods}\label{methods-1}
 
-No data collection was done in our observational study. Everything we
-collected came from reliable outside sources such as the NOAA and NCEI.
+No new data collection was done in our observational study. Everything
+we found came from reliable outside sources such as the NOAA and NCEI.
 This information was gathered by weather posts in and around Dauphin
 Island, measuring ambient water temperature and other important
-meteorological observations. While not all days had the same number of
-water temperature observations, we were able to use daily averages to
-make observations and conclusions about the data.
+meteorological observations. All data sets used were posted as free to
+access text files to the NOAA and NCEI websites, organized by weather
+station and year. We focused only on day, month, year, and water
+temperature in our analysis.
 
-In our analysis we used the software ``R'' to clean, visualize, and
-analyze our information. We created multiple tables to examine daily
+In our analysis, we used the software ``R'' to clean, visualize, and
+examine our information. We created multiple tables to examine daily
 average temperatures, yearly maximum temperatures, and prevalence of
 days that exceed our thresholds. We also graphed some results to make
 them more digestible for a wider audience.
 
-The section discusses an analysis of the risk of shutdown at nuclear
-power plants if water used to cool the plant exceeds 85 degrees
-Fahrenheit (29.44 degrees Celsius). Using public data, we created an
-analysis to find how often the water surrounding Dauphin Island reaches
-the 85 degree F threshold and above to help answer our research
-question. Below is a table of the mean water temperature each month off
-Dauphin Island ({``NCEI Coastal Water Temperature Guide - All Coastal
-Regions Table''} 2025).
+\section{Data Cleaning and Missing
+Data}\label{data-cleaning-and-missing-data}
+
+After collecting all necessary data, we created a new data set that
+would be easier to deal with for all future investigations. This data
+set only included columns with date and time information, and water
+temperature in degrees Celsius. Once we had completed this step, we had
+to then remove any observations with missing data. In this case, all
+observations with missing data were marked as ``999'' or ``99'', so we
+filtered out all datum with ``999'' or ``99'' in the water temperature
+column. Fortunately, there were still more than twenty observations
+spread throughout every day in each data file we used, so we didn't have
+to worry about missing days or inaccurate results.
+
+\section{R Libraries Used}\label{r-libraries-used}
+
+\textbf{\emph{readr}} (Wickham, Hester, and Bryan 2024)
+
+This library was used to read the data we had collected into R so it
+could be transformed and manipulated for our analyses. It took the text
+files we had found and turned them into the data sets we worked with.
+
+\textbf{\emph{dplyr}} (Wickham et al. 2023)
+
+Dplyr was one of the most used libraries in this report. Its many
+functions allowed us to change formatting and information displayed to
+better suit our needs. Some examples of functions used are:
+
+\texttt{rename}
+
+This allowed us to rename columns so we could combine them into one
+large data set.
+
+\texttt{select}
+
+Select gives us the ability to choose which columns we want to keep, and
+which we want to remove.
+
+\texttt{group\_by\ \&\ summarize}
+
+These two functions were used together to accurately compute the average
+water temperature by day, month, or year depending on what we wanted to
+group by.
+
+\textbf{\emph{ggplot2}} (Wickham 2016)
+
+The ggplot2 library helped us create all plots using ggplot, aes(), and
+geom\_bar functions.
+
+\textbf{\emph{lubridate}} (Grolemund and Wickham 2011)
+
+Lubridate helped us separate date columns into year, month, and date so
+we could easily filter and plot our data.
 
 \bookmarksetup{startatroot}
 
-\chapter{Discussion}\label{discussion}
+\chapter{Results}\label{results-1}
+
+\bookmarksetup{startatroot}
+
+\chapter{Discussion}\label{discussion-1}
 
 In order to answer the research question, ``What are the risks
 associated with warm water used for reactor cooling at the Dauphin
@@ -469,8 +486,8 @@ n.d.). It is also important to note that there are environmental factors
 to be considered. A power plant releasing heated water back into its
 surroundings can disrupt the ecological balance, harming or killing the
 plants and animals in the area. Due to the potential risks and NRC
-regulations, once the water temperature surrounding the plant reaches 85
-degrees F, the plant must reduce all operations to 50\% for the next 24
+regulations, once the water temperature surrounding the plant reaches
+85°F, the plant must reduce all operations to 50\% for the next 24
 hours.
 
 In our data collection, we found 94 days in 2024 would have had to
@@ -483,10 +500,12 @@ The chart below gives those limits as well as the predicted number of
 shutdown days. For example, in 2025, we are 95\% confident the true
 number of observed days that water temperature reaches 85° F is between
 40.8 and 157.8. It appears the predicted number of days seems to be
-increasing by about 1 day per year, but the lower confidence limit is
-decreasing while the upper confidence limit is increasing, so we cannot
-definitively say if the number of days per year is increasing,
-decreasing, or staying the same.
+increasing by about 1 day per year. However, the lower confidence limit
+is decreasing while the upper confidence limit is increasing, so we
+cannot definitively say if the number of days per year is increasing,
+decreasing, or staying the same. More data collection from years prior
+to 2012 would be a great way to attempt shrinking the confidence
+intervals.
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.0750}}
@@ -541,7 +560,7 @@ electrical usage.
 
 Throughout the data collection process, we did our best to reduce any
 potential error. Despite using more than a decade of data collected by
-the NOAA finding more data that goes back even further would be helpful
+the NOAA, finding more data that goes back even further would be helpful
 in making our results more accurate. We may not get a complete picture
 of trends in water temperature, so we may not be able to make
 predictions about the future as accurately. In the data we collected,
@@ -591,16 +610,15 @@ guidelines on ideal water temperature, but the idea and consequences are
 the same. For example, the World Nuclear Association writes about the
 Brown's Ferry Nuclear Power Plant in Northern Alabama, ``In mid 2010,
 TVA had to reduce power at its three Brown's Ferry Units in Alabama to
-50\% in order to keep river water temperatures below 32 degrees C, at a
-cost to some \$50 million to customers'' ({``Cooling Power Plants -
-World Nuclear Association,''} n.d.). Worldwide, almost 10\% of all
-energy used comes from the 440 nuclear power plants across the globe
-({``Nuclear Power in the World Today - World Nuclear Association,''}
-n.d.). The World Nuclear Association states that some countries like
-France, Hungary, or Ukraine, rely on nuclear energy for more than half
-of their electricity. In these cases, the threat of operating at half
-capacity is more daunting, as it can effect much of a country's power
-output.
+50\% in order to keep river water temperatures below 32°C, at a cost to
+some \$50 million to customers'' ({``Cooling Power Plants - World
+Nuclear Association,''} n.d.). Worldwide, almost 10\% of all energy used
+comes from the 440 nuclear power plants across the globe ({``Nuclear
+Power in the World Today - World Nuclear Association,''} n.d.). The
+World Nuclear Association states that some countries like France,
+Hungary, or Ukraine, rely on nuclear energy for more than half of their
+electricity. In these cases, the threat of operating at half capacity is
+more daunting, as it can effect much of a country's power output.
 
 Despite the research we've done on the topic, there are multiple
 opportunities to build on the knowledge we've gained. Using local and
@@ -619,15 +637,14 @@ the Dauphin Island power plant may be effected. If water temperature is
 increasing on average year-over-year, the power plant could be at risk
 for longer periods of working at 50\% capacity, further straining power
 supplies in Alabama. Prevention and alleviation tactics would be the
-best focuses of future study.
-
-Finally, alternative water sources or water cooling systems could help
-ease the stress on nuclear power plants. The use of groundwater is an
-intriguing topic, but its slow replenishment could lead to future
-resource issues. Rapid cooling of sea water is another interesting idea,
-but trade offs must be studied to find the feasibility of this idea.
-Upgrading existing cooling features like building a secondary cooling
-tower to make the process more efficient should be looked into as well.
+best focuses of future study. In addition, alternative water sources or
+water cooling systems could help ease the stress on nuclear power
+plants. The use of groundwater is an intriguing topic, but its slow
+replenishment could lead to future resource issues. Rapid cooling of sea
+water is another interesting idea, but trade offs must be studied to
+find the feasibility of this idea. Upgrading existing cooling features
+like building a secondary cooling tower to make the process more
+efficient should be looked into as well.
 
 \bookmarksetup{startatroot}
 
@@ -651,13 +668,14 @@ Growing Climate Risks Prompt Tough Choices \textbar{} Utility Dive.''}
 {``Electricity Data Browser - Net Generation for All Sectors.''} 2024.
 \url{https://www.eia.gov/electricity/data/browser/}.
 
-\bibitem[\citeproctext]{ref-knuth84}
-Knuth, Donald E. 1984. {``Literate Programming.''} \emph{Comput. J.} 27
-(2): 97--111. \url{https://doi.org/10.1093/comjnl/27.2.97}.
+\bibitem[\citeproctext]{ref-lubridate}
+Grolemund, Garrett, and Hadley Wickham. 2011. {``Dates and Times Made
+Easy with {lubridate}.''} \emph{Journal of Statistical Software} 40 (3):
+1--25. \url{https://www.jstatsoft.org/v40/i03/}.
 
-\bibitem[\citeproctext]{ref-nceicoaa}
+\bibitem[\citeproctext]{ref-nceicoa2025}
 {``NCEI Coastal Water Temperature Guide - All Coastal Regions Table.''}
-2025.
+n.d.
 \url{https://www.ncei.noaa.gov/access/coastal-water-temperature-guide/all_table.html}.
 
 \bibitem[\citeproctext]{ref-WNA2025}
@@ -670,9 +688,32 @@ Portugal-Pereira, Joana, Miguel Esteban, and Kathleen Araújo. 2024.
 Hazards: A Review Assessment.''} \emph{Energy Strategy Reviews} 53
 (May): 101365. \url{https://doi.org/10.1016/j.esr.2024.101365}.
 
+\bibitem[\citeproctext]{ref-rstudio}
+{``RStudio Education.''} n.d.
+\url{https://education.rstudio.com/learn/beginner/}.
+
 \bibitem[\citeproctext]{ref-EIA}
 {``U.s. Energy Information Administration - EIA - Independent Statistics
 and Analysis.''} 2024. \url{https://www.eia.gov/state/analysis.php}.
+
+\bibitem[\citeproctext]{ref-NDBC2025}
+US Department of Commerce, National Oceanic, and Atmospheric
+Administration. n.d. {``National Data Buoy Center.''}
+\url{https://www.ndbc.noaa.gov/obs.shtml}.
+
+\bibitem[\citeproctext]{ref-ggplot2}
+Wickham, Hadley. 2016. \emph{Ggplot2: Elegant Graphics for Data
+Analysis}. Springer-Verlag New York.
+\url{https://ggplot2.tidyverse.org}.
+
+\bibitem[\citeproctext]{ref-dplyr}
+Wickham, Hadley, Romain François, Lionel Henry, Kirill Müller, and Davis
+Vaughan. 2023. \emph{Dplyr: A Grammar of Data Manipulation}.
+\url{https://CRAN.R-project.org/package=dplyr}.
+
+\bibitem[\citeproctext]{ref-readr}
+Wickham, Hadley, Jim Hester, and Jennifer Bryan. 2024. \emph{Readr: Read
+Rectangular Text Data}. \url{https://CRAN.R-project.org/package=readr}.
 
 \end{CSLReferences}
 
@@ -714,25 +755,7 @@ degrees Celcius). (\textbf{nceicoa?})
 \end{Shaded}
 
 \begin{verbatim}
-
--- Column specification --------------------------------------------------------
-cols(
-  `#YY` = col_character(),
-  MM = col_character(),
-  DD = col_character(),
-  hh = col_character(),
-  mm = col_character(),
-  DEPTH = col_character(),
-  OTMP = col_character(),
-  COND = col_character(),
-  SAL = col_character(),
-  `O2%` = col_character(),
-  O2PPM = col_character(),
-  CLCON = col_character(),
-  TURB = col_character(),
-  PH = col_character(),
-  EH = col_character()
-)
+Error: 'dpha1h2012.txt' does not exist in current working directory ('C:/Users/Dominic Sander/Downloads/Stat 349').
 \end{verbatim}
 
 \begin{Shaded}
@@ -742,25 +765,7 @@ cols(
 \end{Shaded}
 
 \begin{verbatim}
-
--- Column specification --------------------------------------------------------
-cols(
-  `#YY` = col_character(),
-  MM = col_character(),
-  DD = col_character(),
-  hh = col_character(),
-  mm = col_character(),
-  DEPTH = col_character(),
-  OTMP = col_character(),
-  COND = col_character(),
-  SAL = col_character(),
-  `O2%` = col_character(),
-  O2PPM = col_character(),
-  CLCON = col_character(),
-  TURB = col_character(),
-  PH = col_character(),
-  EH = col_character()
-)
+Error: 'dpah1h2013.txt' does not exist in current working directory ('C:/Users/Dominic Sander/Downloads/Stat 349').
 \end{verbatim}
 
 \begin{Shaded}
@@ -770,25 +775,7 @@ cols(
 \end{Shaded}
 
 \begin{verbatim}
-
--- Column specification --------------------------------------------------------
-cols(
-  `#YY` = col_character(),
-  MM = col_character(),
-  DD = col_character(),
-  hh = col_character(),
-  mm = col_character(),
-  DEPTH = col_character(),
-  OTMP = col_character(),
-  COND = col_character(),
-  SAL = col_character(),
-  `O2%` = col_character(),
-  O2PPM = col_character(),
-  CLCON = col_character(),
-  TURB = col_character(),
-  PH = col_character(),
-  EH = col_character()
-)
+Error: 'dpha1h2014.txt' does not exist in current working directory ('C:/Users/Dominic Sander/Downloads/Stat 349').
 \end{verbatim}
 
 \begin{Shaded}
@@ -798,25 +785,7 @@ cols(
 \end{Shaded}
 
 \begin{verbatim}
-
--- Column specification --------------------------------------------------------
-cols(
-  `#YY` = col_character(),
-  MM = col_character(),
-  DD = col_character(),
-  hh = col_character(),
-  mm = col_character(),
-  DEPTH = col_character(),
-  OTMP = col_character(),
-  COND = col_character(),
-  SAL = col_character(),
-  `O2%` = col_character(),
-  O2PPM = col_character(),
-  CLCON = col_character(),
-  TURB = col_character(),
-  PH = col_character(),
-  EH = col_character()
-)
+Error: 'dpha1h2105.txt' does not exist in current working directory ('C:/Users/Dominic Sander/Downloads/Stat 349').
 \end{verbatim}
 
 \begin{Shaded}
@@ -826,25 +795,7 @@ cols(
 \end{Shaded}
 
 \begin{verbatim}
-
--- Column specification --------------------------------------------------------
-cols(
-  `#YY` = col_character(),
-  MM = col_character(),
-  DD = col_character(),
-  hh = col_character(),
-  mm = col_character(),
-  DEPTH = col_character(),
-  OTMP = col_character(),
-  COND = col_character(),
-  SAL = col_character(),
-  `O2%` = col_character(),
-  O2PPM = col_character(),
-  CLCON = col_character(),
-  TURB = col_character(),
-  PH = col_character(),
-  EH = col_character()
-)
+Error: 'dpha2h2016.txt' does not exist in current working directory ('C:/Users/Dominic Sander/Downloads/Stat 349').
 \end{verbatim}
 
 \begin{Shaded}
@@ -854,25 +805,7 @@ cols(
 \end{Shaded}
 
 \begin{verbatim}
-
--- Column specification --------------------------------------------------------
-cols(
-  `#YY` = col_character(),
-  MM = col_character(),
-  DD = col_character(),
-  hh = col_character(),
-  mm = col_character(),
-  DEPTH = col_character(),
-  OTMP = col_character(),
-  COND = col_character(),
-  SAL = col_character(),
-  `O2%` = col_character(),
-  O2PPM = col_character(),
-  CLCON = col_character(),
-  TURB = col_character(),
-  PH = col_character(),
-  EH = col_character()
-)
+Error: 'dpha2h2017.txt' does not exist in current working directory ('C:/Users/Dominic Sander/Downloads/Stat 349').
 \end{verbatim}
 
 \begin{Shaded}
@@ -882,25 +815,7 @@ cols(
 \end{Shaded}
 
 \begin{verbatim}
-
--- Column specification --------------------------------------------------------
-cols(
-  `#YY` = col_character(),
-  MM = col_character(),
-  DD = col_character(),
-  hh = col_character(),
-  mm = col_character(),
-  DEPTH = col_character(),
-  OTMP = col_character(),
-  COND = col_character(),
-  SAL = col_character(),
-  `O2%` = col_character(),
-  O2PPM = col_character(),
-  CLCON = col_character(),
-  TURB = col_character(),
-  PH = col_character(),
-  EH = col_character()
-)
+Error: 'dpha2h2018.txt' does not exist in current working directory ('C:/Users/Dominic Sander/Downloads/Stat 349').
 \end{verbatim}
 
 \begin{Shaded}
@@ -910,25 +825,7 @@ cols(
 \end{Shaded}
 
 \begin{verbatim}
-
--- Column specification --------------------------------------------------------
-cols(
-  `#YY` = col_character(),
-  MM = col_character(),
-  DD = col_character(),
-  hh = col_character(),
-  mm = col_character(),
-  DEPTH = col_character(),
-  OTMP = col_character(),
-  COND = col_character(),
-  SAL = col_character(),
-  `O2%` = col_character(),
-  O2PPM = col_character(),
-  CLCON = col_character(),
-  TURB = col_character(),
-  PH = col_character(),
-  EH = col_character()
-)
+Error: 'dpha2h2019.txt' does not exist in current working directory ('C:/Users/Dominic Sander/Downloads/Stat 349').
 \end{verbatim}
 
 \begin{Shaded}
@@ -938,25 +835,7 @@ cols(
 \end{Shaded}
 
 \begin{verbatim}
-
--- Column specification --------------------------------------------------------
-cols(
-  `#YY` = col_character(),
-  MM = col_character(),
-  DD = col_character(),
-  hh = col_character(),
-  mm = col_character(),
-  DEPTH = col_character(),
-  OTMP = col_character(),
-  COND = col_character(),
-  SAL = col_character(),
-  `O2%` = col_character(),
-  O2PPM = col_character(),
-  CLCON = col_character(),
-  TURB = col_character(),
-  PH = col_character(),
-  EH = col_character()
-)
+Error: 'dpha2h2020.txt' does not exist in current working directory ('C:/Users/Dominic Sander/Downloads/Stat 349').
 \end{verbatim}
 
 \begin{Shaded}
@@ -966,40 +845,7 @@ cols(
 \end{Shaded}
 
 \begin{verbatim}
-
--- Column specification --------------------------------------------------------
-cols(
-  `#YY` = col_character(),
-  MM = col_character(),
-  DD = col_character(),
-  hh = col_character(),
-  mm = col_character(),
-  WDIR = col_character(),
-  WSPD = col_character(),
-  GST = col_character(),
-  WVHT = col_character(),
-  DPD = col_character(),
-  APD = col_character(),
-  MWD = col_character(),
-  PRES = col_character(),
-  ATMP = col_character(),
-  WTMP = col_character(),
-  DEWP = col_character(),
-  VIS = col_character(),
-  TIDE = col_character()
-)
-\end{verbatim}
-
-\begin{verbatim}
-Warning: 51483 parsing failures.
-row col   expected     actual             file
-  2  -- 18 columns 19 columns '42012h2021.txt'
-  3  -- 18 columns 19 columns '42012h2021.txt'
-  4  -- 18 columns 19 columns '42012h2021.txt'
-  5  -- 18 columns 19 columns '42012h2021.txt'
-  6  -- 18 columns 19 columns '42012h2021.txt'
-... ... .......... .......... ................
-See problems(...) for more details.
+Error: '42012h2021.txt' does not exist in current working directory ('C:/Users/Dominic Sander/Downloads/Stat 349').
 \end{verbatim}
 
 \begin{Shaded}
@@ -1009,28 +855,7 @@ See problems(...) for more details.
 \end{Shaded}
 
 \begin{verbatim}
-
--- Column specification --------------------------------------------------------
-cols(
-  `#YY` = col_character(),
-  MM = col_character(),
-  DD = col_character(),
-  hh = col_character(),
-  mm = col_character(),
-  WDIR = col_character(),
-  WSPD = col_character(),
-  GST = col_character(),
-  WVHT = col_character(),
-  DPD = col_character(),
-  APD = col_character(),
-  MWD = col_character(),
-  PRES = col_character(),
-  ATMP = col_character(),
-  WTMP = col_character(),
-  DEWP = col_character(),
-  VIS = col_character(),
-  TIDE = col_character()
-)
+Error: 'dpha2h2022.txt' does not exist in current working directory ('C:/Users/Dominic Sander/Downloads/Stat 349').
 \end{verbatim}
 
 \begin{Shaded}
@@ -1040,28 +865,7 @@ cols(
 \end{Shaded}
 
 \begin{verbatim}
-
--- Column specification --------------------------------------------------------
-cols(
-  `#YY` = col_character(),
-  MM = col_character(),
-  DD = col_character(),
-  hh = col_character(),
-  mm = col_character(),
-  WDIR = col_character(),
-  WSPD = col_character(),
-  GST = col_character(),
-  WVHT = col_character(),
-  DPD = col_character(),
-  APD = col_character(),
-  MWD = col_character(),
-  PRES = col_character(),
-  ATMP = col_character(),
-  WTMP = col_character(),
-  DEWP = col_character(),
-  VIS = col_character(),
-  TIDE = col_character()
-)
+Error: 'dpha2h2023.txt' does not exist in current working directory ('C:/Users/Dominic Sander/Downloads/Stat 349').
 \end{verbatim}
 
 \begin{Shaded}
@@ -1071,28 +875,7 @@ cols(
 \end{Shaded}
 
 \begin{verbatim}
-
--- Column specification --------------------------------------------------------
-cols(
-  `#YY` = col_character(),
-  MM = col_character(),
-  DD = col_character(),
-  hh = col_character(),
-  mm = col_character(),
-  WDIR = col_character(),
-  WSPD = col_character(),
-  GST = col_character(),
-  WVHT = col_character(),
-  DPD = col_character(),
-  APD = col_character(),
-  MWD = col_character(),
-  PRES = col_character(),
-  ATMP = col_character(),
-  WTMP = col_character(),
-  DEWP = col_character(),
-  VIS = col_character(),
-  TIDE = col_character()
-)
+Error: 'dpha2h2024.txt' does not exist in current working directory ('C:/Users/Dominic Sander/Downloads/Stat 349').
 \end{verbatim}
 
 \begin{Shaded}
@@ -1120,7 +903,6 @@ The following objects are masked from 'package:base':
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\FunctionTok{library}\NormalTok{(tidyr)}
 \FunctionTok{library}\NormalTok{(ggplot2)}
 \FunctionTok{library}\NormalTok{(knitr)}
 \end{Highlighting}
@@ -1134,56 +916,283 @@ Warning: package 'knitr' was built under R version 4.3.3
 \begin{Highlighting}[]
 \NormalTok{dpha2\_12 }\OtherTok{\textless{}{-}}\NormalTok{ dpha2h2012 }\SpecialCharTok{\%\textgreater{}\%} \FunctionTok{select}\NormalTok{(}\StringTok{"\#YY"}\NormalTok{,}\StringTok{"MM"}\NormalTok{,}\StringTok{"DD"}\NormalTok{,}\StringTok{"hh"}\NormalTok{,}\StringTok{"mm"}\NormalTok{,}\StringTok{"OTMP"}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
    \FunctionTok{rename}\NormalTok{(}\AttributeTok{WTMP=}\NormalTok{OTMP)}
-\NormalTok{dpha2\_12 }\OtherTok{\textless{}{-}}\NormalTok{ dpha2\_12[}\SpecialCharTok{{-}}\DecValTok{1}\NormalTok{, ]}
+\end{Highlighting}
+\end{Shaded}
 
+\begin{verbatim}
+Error: object 'dpha2h2012' not found
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{dpha2\_12 }\OtherTok{\textless{}{-}}\NormalTok{ dpha2\_12[}\SpecialCharTok{{-}}\DecValTok{1}\NormalTok{, ]}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+Error: object 'dpha2_12' not found
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
 \NormalTok{dpha2\_13 }\OtherTok{\textless{}{-}}\NormalTok{ dpha2h2013 }\SpecialCharTok{\%\textgreater{}\%} \FunctionTok{select}\NormalTok{(}\StringTok{"\#YY"}\NormalTok{,}\StringTok{"MM"}\NormalTok{,}\StringTok{"DD"}\NormalTok{,}\StringTok{"hh"}\NormalTok{,}\StringTok{"mm"}\NormalTok{,}\StringTok{"OTMP"}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
    \FunctionTok{rename}\NormalTok{(}\AttributeTok{WTMP=}\NormalTok{OTMP)}
-\NormalTok{dpha2\_13 }\OtherTok{\textless{}{-}}\NormalTok{ dpha2\_13[}\SpecialCharTok{{-}}\DecValTok{1}\NormalTok{, ]}
+\end{Highlighting}
+\end{Shaded}
 
+\begin{verbatim}
+Error: object 'dpha2h2013' not found
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{dpha2\_13 }\OtherTok{\textless{}{-}}\NormalTok{ dpha2\_13[}\SpecialCharTok{{-}}\DecValTok{1}\NormalTok{, ]}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+Error: object 'dpha2_13' not found
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
 \NormalTok{dpha2\_14 }\OtherTok{\textless{}{-}}\NormalTok{ dpha2h2014 }\SpecialCharTok{\%\textgreater{}\%} \FunctionTok{select}\NormalTok{(}\StringTok{"\#YY"}\NormalTok{,}\StringTok{"MM"}\NormalTok{,}\StringTok{"DD"}\NormalTok{,}\StringTok{"hh"}\NormalTok{,}\StringTok{"mm"}\NormalTok{,}\StringTok{"OTMP"}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
    \FunctionTok{rename}\NormalTok{(}\AttributeTok{WTMP=}\NormalTok{OTMP)}
-\NormalTok{dpha2\_14 }\OtherTok{\textless{}{-}}\NormalTok{ dpha2\_14[}\SpecialCharTok{{-}}\DecValTok{1}\NormalTok{, ]}
+\end{Highlighting}
+\end{Shaded}
 
+\begin{verbatim}
+Error: object 'dpha2h2014' not found
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{dpha2\_14 }\OtherTok{\textless{}{-}}\NormalTok{ dpha2\_14[}\SpecialCharTok{{-}}\DecValTok{1}\NormalTok{, ]}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+Error: object 'dpha2_14' not found
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
 \NormalTok{dpha2\_15 }\OtherTok{\textless{}{-}}\NormalTok{ dpha2h2015 }\SpecialCharTok{\%\textgreater{}\%} \FunctionTok{select}\NormalTok{(}\StringTok{"\#YY"}\NormalTok{,}\StringTok{"MM"}\NormalTok{,}\StringTok{"DD"}\NormalTok{,}\StringTok{"hh"}\NormalTok{,}\StringTok{"mm"}\NormalTok{,}\StringTok{"OTMP"}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
    \FunctionTok{rename}\NormalTok{(}\AttributeTok{WTMP=}\NormalTok{OTMP)}
-\NormalTok{dpha2\_15 }\OtherTok{\textless{}{-}}\NormalTok{ dpha2\_15[}\SpecialCharTok{{-}}\DecValTok{1}\NormalTok{, ]}
+\end{Highlighting}
+\end{Shaded}
 
+\begin{verbatim}
+Error: object 'dpha2h2015' not found
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{dpha2\_15 }\OtherTok{\textless{}{-}}\NormalTok{ dpha2\_15[}\SpecialCharTok{{-}}\DecValTok{1}\NormalTok{, ]}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+Error: object 'dpha2_15' not found
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
 \NormalTok{dpha2\_16 }\OtherTok{\textless{}{-}}\NormalTok{ dpha2h2016 }\SpecialCharTok{\%\textgreater{}\%} \FunctionTok{select}\NormalTok{(}\StringTok{"\#YY"}\NormalTok{,}\StringTok{"MM"}\NormalTok{,}\StringTok{"DD"}\NormalTok{,}\StringTok{"hh"}\NormalTok{,}\StringTok{"mm"}\NormalTok{,}\StringTok{"OTMP"}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
    \FunctionTok{rename}\NormalTok{(}\AttributeTok{WTMP=}\NormalTok{OTMP)}
-\NormalTok{dpha2\_16 }\OtherTok{\textless{}{-}}\NormalTok{ dpha2\_16[}\SpecialCharTok{{-}}\DecValTok{1}\NormalTok{, ] }
+\end{Highlighting}
+\end{Shaded}
 
+\begin{verbatim}
+Error: object 'dpha2h2016' not found
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{dpha2\_16 }\OtherTok{\textless{}{-}}\NormalTok{ dpha2\_16[}\SpecialCharTok{{-}}\DecValTok{1}\NormalTok{, ] }
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+Error: object 'dpha2_16' not found
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
 \NormalTok{dpha2\_17 }\OtherTok{\textless{}{-}}\NormalTok{ dpha2h2017 }\SpecialCharTok{\%\textgreater{}\%} \FunctionTok{select}\NormalTok{(}\StringTok{"\#YY"}\NormalTok{,}\StringTok{"MM"}\NormalTok{,}\StringTok{"DD"}\NormalTok{,}\StringTok{"hh"}\NormalTok{,}\StringTok{"mm"}\NormalTok{,}\StringTok{"OTMP"}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
   \FunctionTok{rename}\NormalTok{(}\AttributeTok{WTMP=}\NormalTok{OTMP)}
-\NormalTok{dpha2\_17 }\OtherTok{\textless{}{-}}\NormalTok{ dpha2\_17[}\SpecialCharTok{{-}}\DecValTok{1}\NormalTok{, ]}
+\end{Highlighting}
+\end{Shaded}
 
+\begin{verbatim}
+Error: object 'dpha2h2017' not found
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{dpha2\_17 }\OtherTok{\textless{}{-}}\NormalTok{ dpha2\_17[}\SpecialCharTok{{-}}\DecValTok{1}\NormalTok{, ]}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+Error: object 'dpha2_17' not found
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
 \NormalTok{dpha2\_18 }\OtherTok{\textless{}{-}}\NormalTok{ dpha2h2018 }\SpecialCharTok{\%\textgreater{}\%} \FunctionTok{select}\NormalTok{(}\StringTok{"\#YY"}\NormalTok{,}\StringTok{"MM"}\NormalTok{,}\StringTok{"DD"}\NormalTok{,}\StringTok{"hh"}\NormalTok{,}\StringTok{"mm"}\NormalTok{,}\StringTok{"OTMP"}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
   \FunctionTok{rename}\NormalTok{(}\AttributeTok{WTMP=}\NormalTok{OTMP)}
-\NormalTok{dpha2\_18 }\OtherTok{\textless{}{-}}\NormalTok{ dpha2\_18[}\SpecialCharTok{{-}}\DecValTok{1}\NormalTok{, ]}
+\end{Highlighting}
+\end{Shaded}
 
+\begin{verbatim}
+Error: object 'dpha2h2018' not found
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{dpha2\_18 }\OtherTok{\textless{}{-}}\NormalTok{ dpha2\_18[}\SpecialCharTok{{-}}\DecValTok{1}\NormalTok{, ]}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+Error: object 'dpha2_18' not found
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
 \NormalTok{dpha2\_19 }\OtherTok{\textless{}{-}}\NormalTok{ dpha2h2019 }\SpecialCharTok{\%\textgreater{}\%} \FunctionTok{select}\NormalTok{(}\StringTok{"\#YY"}\NormalTok{,}\StringTok{"MM"}\NormalTok{,}\StringTok{"DD"}\NormalTok{,}\StringTok{"hh"}\NormalTok{,}\StringTok{"mm"}\NormalTok{,}\StringTok{"OTMP"}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
   \FunctionTok{rename}\NormalTok{(}\AttributeTok{WTMP=}\NormalTok{OTMP)}
-\NormalTok{dpha2\_19 }\OtherTok{\textless{}{-}}\NormalTok{ dpha2\_19[}\SpecialCharTok{{-}}\DecValTok{1}\NormalTok{, ]}
+\end{Highlighting}
+\end{Shaded}
 
+\begin{verbatim}
+Error: object 'dpha2h2019' not found
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{dpha2\_19 }\OtherTok{\textless{}{-}}\NormalTok{ dpha2\_19[}\SpecialCharTok{{-}}\DecValTok{1}\NormalTok{, ]}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+Error: object 'dpha2_19' not found
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
 \NormalTok{dpha2\_20 }\OtherTok{\textless{}{-}}\NormalTok{ dpha2h2020 }\SpecialCharTok{\%\textgreater{}\%} \FunctionTok{select}\NormalTok{(}\StringTok{"\#YY"}\NormalTok{,}\StringTok{"MM"}\NormalTok{,}\StringTok{"DD"}\NormalTok{,}\StringTok{"hh"}\NormalTok{,}\StringTok{"mm"}\NormalTok{,}\StringTok{"OTMP"}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
   \FunctionTok{rename}\NormalTok{(}\AttributeTok{WTMP=}\NormalTok{OTMP)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+Error: object 'dpha2h2020' not found
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
 \NormalTok{dpha2\_20 }\OtherTok{\textless{}{-}}\NormalTok{ dpha2\_20[}\SpecialCharTok{{-}}\DecValTok{1}\NormalTok{, ]}
+\end{Highlighting}
+\end{Shaded}
 
+\begin{verbatim}
+Error: object 'dpha2_20' not found
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
 \NormalTok{X42012h\_21 }\OtherTok{\textless{}{-}}\NormalTok{ X42012h2021 }\SpecialCharTok{\%\textgreater{}\%} \FunctionTok{select}\NormalTok{(}\StringTok{"\#YY"}\NormalTok{,}\StringTok{"MM"}\NormalTok{,}\StringTok{"DD"}\NormalTok{,}\StringTok{"hh"}\NormalTok{,}\StringTok{"mm"}\NormalTok{,}\StringTok{"WTMP"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+Error: object 'X42012h2021' not found
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
 \NormalTok{X42012h\_21 }\OtherTok{\textless{}{-}}\NormalTok{ X42012h\_21[}\SpecialCharTok{{-}}\DecValTok{1}\NormalTok{, ]}
+\end{Highlighting}
+\end{Shaded}
 
+\begin{verbatim}
+Error: object 'X42012h_21' not found
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
 \NormalTok{dpha2\_22 }\OtherTok{\textless{}{-}}\NormalTok{ dpha2h2022 }\SpecialCharTok{\%\textgreater{}\%} \FunctionTok{select}\NormalTok{(}\StringTok{"\#YY"}\NormalTok{,}\StringTok{"MM"}\NormalTok{,}\StringTok{"DD"}\NormalTok{,}\StringTok{"hh"}\NormalTok{,}\StringTok{"mm"}\NormalTok{,}\StringTok{"WTMP"}\NormalTok{) }
-\NormalTok{dpha2\_22 }\OtherTok{\textless{}{-}}\NormalTok{ dpha2\_22[}\SpecialCharTok{{-}}\DecValTok{1}\NormalTok{, ]}
-\NormalTok{dpha2\_23 }\OtherTok{\textless{}{-}}\NormalTok{ dpha2h2023 }\SpecialCharTok{\%\textgreater{}\%} \FunctionTok{select}\NormalTok{(}\StringTok{"\#YY"}\NormalTok{,}\StringTok{"MM"}\NormalTok{,}\StringTok{"DD"}\NormalTok{,}\StringTok{"hh"}\NormalTok{,}\StringTok{"mm"}\NormalTok{,}\StringTok{"WTMP"}\NormalTok{) }
-\NormalTok{dpha2\_23 }\OtherTok{\textless{}{-}}\NormalTok{ dpha2\_23[}\SpecialCharTok{{-}}\DecValTok{1}\NormalTok{, ]}
-\NormalTok{dpha2\_24 }\OtherTok{\textless{}{-}}\NormalTok{ dpha2h2024 }\SpecialCharTok{\%\textgreater{}\%} \FunctionTok{select}\NormalTok{(}\StringTok{"\#YY"}\NormalTok{,}\StringTok{"MM"}\NormalTok{,}\StringTok{"DD"}\NormalTok{,}\StringTok{"hh"}\NormalTok{,}\StringTok{"mm"}\NormalTok{,}\StringTok{"WTMP"}\NormalTok{) }
-\NormalTok{dpha2\_24 }\OtherTok{\textless{}{-}}\NormalTok{ dpha2\_24[}\SpecialCharTok{{-}}\DecValTok{1}\NormalTok{, ]}
+\end{Highlighting}
+\end{Shaded}
 
+\begin{verbatim}
+Error: object 'dpha2h2022' not found
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{dpha2\_22 }\OtherTok{\textless{}{-}}\NormalTok{ dpha2\_22[}\SpecialCharTok{{-}}\DecValTok{1}\NormalTok{, ]}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+Error: object 'dpha2_22' not found
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{dpha2\_23 }\OtherTok{\textless{}{-}}\NormalTok{ dpha2h2023 }\SpecialCharTok{\%\textgreater{}\%} \FunctionTok{select}\NormalTok{(}\StringTok{"\#YY"}\NormalTok{,}\StringTok{"MM"}\NormalTok{,}\StringTok{"DD"}\NormalTok{,}\StringTok{"hh"}\NormalTok{,}\StringTok{"mm"}\NormalTok{,}\StringTok{"WTMP"}\NormalTok{) }
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+Error: object 'dpha2h2023' not found
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{dpha2\_23 }\OtherTok{\textless{}{-}}\NormalTok{ dpha2\_23[}\SpecialCharTok{{-}}\DecValTok{1}\NormalTok{, ]}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+Error: object 'dpha2_23' not found
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{dpha2\_24 }\OtherTok{\textless{}{-}}\NormalTok{ dpha2h2024 }\SpecialCharTok{\%\textgreater{}\%} \FunctionTok{select}\NormalTok{(}\StringTok{"\#YY"}\NormalTok{,}\StringTok{"MM"}\NormalTok{,}\StringTok{"DD"}\NormalTok{,}\StringTok{"hh"}\NormalTok{,}\StringTok{"mm"}\NormalTok{,}\StringTok{"WTMP"}\NormalTok{) }
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+Error: object 'dpha2h2024' not found
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{dpha2\_24 }\OtherTok{\textless{}{-}}\NormalTok{ dpha2\_24[}\SpecialCharTok{{-}}\DecValTok{1}\NormalTok{, ]}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+Error: object 'dpha2_24' not found
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
 \NormalTok{dpha\_combined }\OtherTok{\textless{}{-}} \FunctionTok{bind\_rows}\NormalTok{(dpha2\_12, dpha2\_13, dpha2\_14, dpha2\_15, dpha2\_16, dpha2\_17, dpha2\_18, dpha2\_19, dpha2\_20, X42012h\_21, dpha2\_22, dpha2\_23, dpha2\_24}
 \NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
   \FunctionTok{arrange}\NormalTok{(}\StringTok{\textasciigrave{}}\AttributeTok{\#YY}\StringTok{\textasciigrave{}}\NormalTok{, MM, DD, hh, mm) }\SpecialCharTok{\%\textgreater{}\%}
   \FunctionTok{filter}\NormalTok{(WTMP }\SpecialCharTok{\textless{}=}\DecValTok{40}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
+
+\begin{verbatim}
+Error: object 'dpha2_12' not found
+\end{verbatim}
 
 Create dataset for av temp
 
@@ -1194,11 +1203,23 @@ Create dataset for av temp
   \FunctionTok{filter}\NormalTok{(WTMP }\SpecialCharTok{\textless{}=}\DecValTok{40}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
   \FunctionTok{group\_by}\NormalTok{(}\StringTok{\textquotesingle{}\#YY\textquotesingle{}}\NormalTok{, MM, DD) }\SpecialCharTok{\%\textgreater{}\%}
   \FunctionTok{summarize}\NormalTok{(}\AttributeTok{Avg\_WTMP =} \FunctionTok{mean}\NormalTok{(WTMP, }\AttributeTok{na.rm =} \ConstantTok{TRUE}\NormalTok{), }\AttributeTok{.groups =} \StringTok{"drop"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
 
+\begin{verbatim}
+Error: object 'dpha_combined' not found
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
 \NormalTok{dpha\_over85 }\OtherTok{\textless{}{-}}\NormalTok{ dpha\_av }\SpecialCharTok{\%\textgreater{}\%}
   \FunctionTok{filter}\NormalTok{(Avg\_WTMP}\SpecialCharTok{\textgreater{}=}\FloatTok{29.4444}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
+
+\begin{verbatim}
+Error: object 'dpha_av' not found
+\end{verbatim}
 
 Graph of av. temp by day
 
@@ -1209,14 +1230,22 @@ Graph of av. temp by day
 \end{Shaded}
 
 \begin{verbatim}
-[1] "\"#YY\""  "MM"       "DD"       "Avg_WTMP"
+Error: object 'dpha_av' not found
 \end{verbatim}
 
 \begin{Shaded}
 \begin{Highlighting}[]
 \NormalTok{dpha\_av }\OtherTok{\textless{}{-}}\NormalTok{ dpha\_av }\SpecialCharTok{\%\textgreater{}\%}
   \FunctionTok{select}\NormalTok{(}\SpecialCharTok{{-}}\StringTok{\textasciigrave{}}\SpecialCharTok{\textbackslash{}"}\AttributeTok{\#YY}\SpecialCharTok{\textbackslash{}"}\StringTok{\textasciigrave{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
 
+\begin{verbatim}
+Error: object 'dpha_av' not found
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
 \FunctionTok{ggplot}\NormalTok{(dpha\_av, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =} \FunctionTok{factor}\NormalTok{(}\FunctionTok{paste}\NormalTok{(MM, DD, }\AttributeTok{sep =} \StringTok{"{-}"}\NormalTok{)), }\AttributeTok{y =}\NormalTok{ Avg\_WTMP)) }\SpecialCharTok{+}
   \FunctionTok{geom\_bar}\NormalTok{(}\AttributeTok{stat =} \StringTok{"identity"}\NormalTok{, }\AttributeTok{fill =} \StringTok{"deepskyblue4"}\NormalTok{) }\SpecialCharTok{+} 
   \FunctionTok{geom\_hline}\NormalTok{(}\AttributeTok{yintercept =} \FloatTok{29.44}\NormalTok{, }\AttributeTok{linetype =} \StringTok{"dashed"}\NormalTok{, }\AttributeTok{color =} \StringTok{"red"}\NormalTok{) }\SpecialCharTok{+}
@@ -1227,7 +1256,9 @@ Graph of av. temp by day
 \end{Highlighting}
 \end{Shaded}
 
-\pandocbounded{\includegraphics[keepaspectratio]{draft-data-doc_files/figure-pdf/unnamed-chunk-3-1.pdf}}
+\begin{verbatim}
+Error: object 'dpha_av' not found
+\end{verbatim}
 
 Total Days Per Month With Av. Over 29.44
 
@@ -1237,7 +1268,15 @@ Total Days Per Month With Av. Over 29.44
   \FunctionTok{group\_by}\NormalTok{(MM) }\SpecialCharTok{\%\textgreater{}\%}
   \FunctionTok{summarize}\NormalTok{(}\AttributeTok{Count=}\FunctionTok{n}\NormalTok{(), }\AttributeTok{.groups=}\StringTok{"drop"}\NormalTok{)}\SpecialCharTok{\%\textgreater{}\%}
   \FunctionTok{complete}\NormalTok{(}\AttributeTok{MM=}\FunctionTok{sprintf}\NormalTok{(}\StringTok{"\%02d"}\NormalTok{, }\DecValTok{1}\SpecialCharTok{:}\DecValTok{12}\NormalTok{), }\AttributeTok{fill =} \FunctionTok{list}\NormalTok{(}\AttributeTok{Count=}\DecValTok{0}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
 
+\begin{verbatim}
+Error in complete(., MM = sprintf("%02d", 1:12), fill = list(Count = 0)): could not find function "complete"
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
 \FunctionTok{data}\NormalTok{(month\_count)}
 \end{Highlighting}
 \end{Shaded}
@@ -1252,26 +1291,9 @@ Warning in data(month_count): data set 'month_count' not found
 \end{Highlighting}
 \end{Shaded}
 
-\begin{longtable}[]{@{}lr@{}}
-\toprule\noalign{}
-MM & Count \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-01 & 0 \\
-02 & 0 \\
-03 & 0 \\
-04 & 0 \\
-05 & 0 \\
-06 & 2 \\
-07 & 24 \\
-08 & 25 \\
-09 & 2 \\
-10 & 0 \\
-11 & 0 \\
-12 & 0 \\
-\end{longtable}
+\begin{verbatim}
+Error: object 'month_count' not found
+\end{verbatim}
 
 Total Days Per Month With Obs. \textgreater{} 29.44 in 2024
 
@@ -1280,34 +1302,34 @@ Total Days Per Month With Obs. \textgreater{} 29.44 in 2024
 \NormalTok{dpha2\_24\_29 }\OtherTok{\textless{}{-}}\NormalTok{ dpha2\_24 }\SpecialCharTok{\%\textgreater{}\%}
   \FunctionTok{filter}\NormalTok{(WTMP }\SpecialCharTok{\textgreater{}=} \FloatTok{29.44}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
   \FunctionTok{filter}\NormalTok{(WTMP }\SpecialCharTok{\textless{}=} \DecValTok{50}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
 
+\begin{verbatim}
+Error: object 'dpha2_24' not found
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
 \NormalTok{month\_obs }\OtherTok{\textless{}{-}}\NormalTok{ dpha2\_24\_29 }\SpecialCharTok{\%\textgreater{}\%}
   \FunctionTok{group\_by}\NormalTok{(MM) }\SpecialCharTok{\%\textgreater{}\%}
   \FunctionTok{summarize}\NormalTok{(}\AttributeTok{Days =} \FunctionTok{n\_distinct}\NormalTok{(DD), }\AttributeTok{.groups =} \StringTok{"drop"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
 
+\begin{verbatim}
+Error: object 'dpha2_24_29' not found
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
 \FunctionTok{kable}\NormalTok{(month\_obs, }\AttributeTok{caption=}\StringTok{"Total Days Per Month With an Obs. \textgreater{} 29.44° C"}\NormalTok{, }\AttributeTok{col.names=}\FunctionTok{c}\NormalTok{(}\StringTok{"Month"}\NormalTok{, }\StringTok{"Total Days"}\NormalTok{))}
 \end{Highlighting}
 \end{Shaded}
 
-\begin{longtable}[]{@{}lr@{}}
-\caption{Total Days Per Month With an Obs. \textgreater{} 29.44°
-C}\tabularnewline
-\toprule\noalign{}
-Month & Total Days \\
-\midrule\noalign{}
-\endfirsthead
-\toprule\noalign{}
-Month & Total Days \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-05 & 7 \\
-06 & 12 \\
-07 & 31 \\
-08 & 31 \\
-09 & 13 \\
-\end{longtable}
+\begin{verbatim}
+Error: object 'month_obs' not found
+\end{verbatim}
 
 Total days per year with daily max temp above 29.44
 
@@ -1338,7 +1360,15 @@ The following objects are masked from 'package:base':
   \FunctionTok{mutate}\NormalTok{(}
     \AttributeTok{Date =} \FunctionTok{make\_date}\NormalTok{(}\AttributeTok{year =} \FunctionTok{as.integer}\NormalTok{(}\StringTok{\textasciigrave{}}\AttributeTok{\#YY}\StringTok{\textasciigrave{}}\NormalTok{), }\AttributeTok{month =} \FunctionTok{as.integer}\NormalTok{(MM), }\AttributeTok{day =} \FunctionTok{as.integer}\NormalTok{(DD))}
 \NormalTok{  )}
+\end{Highlighting}
+\end{Shaded}
 
+\begin{verbatim}
+Error: object 'dpha_combined' not found
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
 \NormalTok{year\_above\_29 }\OtherTok{\textless{}{-}}\NormalTok{ dpha\_combined }\SpecialCharTok{\%\textgreater{}\%}
   \FunctionTok{filter}\NormalTok{(WTMP }\SpecialCharTok{\textgreater{}=} \FloatTok{29.44}\NormalTok{, WTMP }\SpecialCharTok{\textless{}=} \DecValTok{50}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
   \FunctionTok{group\_by}\NormalTok{(}\AttributeTok{Year =} \FunctionTok{year}\NormalTok{(Date)) }\SpecialCharTok{\%\textgreater{}\%}
@@ -1350,57 +1380,82 @@ The following objects are masked from 'package:base':
 \end{Highlighting}
 \end{Shaded}
 
+\begin{verbatim}
+Error: object 'dpha_combined' not found
+\end{verbatim}
+
 Predictive model for next five years
 
 \begin{Shaded}
 \begin{Highlighting}[]
 \NormalTok{water\_model }\OtherTok{\textless{}{-}} \FunctionTok{lm}\NormalTok{(Days\_Above\_29\_44C }\SpecialCharTok{\textasciitilde{}}\NormalTok{ Year, }\AttributeTok{data =}\NormalTok{ year\_above\_29)}
+\end{Highlighting}
+\end{Shaded}
 
+\begin{verbatim}
+Error in eval(mf, parent.frame()): object 'year_above_29' not found
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
 \FunctionTok{summary}\NormalTok{(water\_model)  }
 \end{Highlighting}
 \end{Shaded}
 
 \begin{verbatim}
-
-Call:
-lm(formula = Days_Above_29_44C ~ Year, data = year_above_29)
-
-Residuals:
-   Min     1Q Median     3Q    Max 
--43.90 -11.13  -1.72  13.24  43.69 
-
-Coefficients:
-              Estimate Std. Error t value Pr(>|t|)
-(Intercept) -1647.4945  3426.9144  -0.481    0.640
-Year            0.8626     1.6982   0.508    0.621
-
-Residual standard error: 22.91 on 11 degrees of freedom
-Multiple R-squared:  0.02292,   Adjusted R-squared:  -0.0659 
-F-statistic: 0.258 on 1 and 11 DF,  p-value: 0.6215
+Error: object 'water_model' not found
 \end{verbatim}
 
 \begin{Shaded}
 \begin{Highlighting}[]
 \NormalTok{future\_data }\OtherTok{\textless{}{-}} \FunctionTok{data.frame}\NormalTok{(}\AttributeTok{Year =} \FunctionTok{seq}\NormalTok{(}\FunctionTok{max}\NormalTok{(year\_above\_29}\SpecialCharTok{$}\NormalTok{Year) }\SpecialCharTok{+} \DecValTok{1}\NormalTok{, }\AttributeTok{by =} \DecValTok{1}\NormalTok{, }\AttributeTok{length.out =} \DecValTok{5}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
 
+\begin{verbatim}
+Error: object 'year_above_29' not found
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
 \CommentTok{\# Predict with confidence intervals}
 \NormalTok{future\_predictions }\OtherTok{\textless{}{-}} \FunctionTok{predict}\NormalTok{(water\_model, }\AttributeTok{newdata =}\NormalTok{ future\_data, }\AttributeTok{interval =} \StringTok{"prediction"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
 
+\begin{verbatim}
+Error: object 'water_model' not found
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
 \CommentTok{\# Combine predictions with years}
 \NormalTok{forecast }\OtherTok{\textless{}{-}} \FunctionTok{cbind}\NormalTok{(future\_data, }\FunctionTok{round}\NormalTok{(}\FunctionTok{as.data.frame}\NormalTok{(future\_predictions), }\DecValTok{1}\NormalTok{))}
-\FunctionTok{names}\NormalTok{(forecast) }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\StringTok{"Year"}\NormalTok{, }\StringTok{"Predicted\_Hot\_Days"}\NormalTok{, }\StringTok{"Lower"}\NormalTok{, }\StringTok{"Upper"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
 
+\begin{verbatim}
+Error: object 'future_data' not found
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{names}\NormalTok{(forecast) }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\StringTok{"Year"}\NormalTok{, }\StringTok{"Predicted\_Hot\_Days"}\NormalTok{, }\StringTok{"Lower"}\NormalTok{, }\StringTok{"Upper"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+Error: object 'forecast' not found
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
 \FunctionTok{print}\NormalTok{(forecast)}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{verbatim}
-  Year Predicted_Hot_Days Lower Upper
-1 2025               99.3  40.8 157.8
-2 2026              100.2  39.9 160.5
-3 2027              101.1  38.9 163.3
-4 2028              101.9  37.6 166.2
-5 2029              102.8  36.2 169.3
+Error: object 'forecast' not found
 \end{verbatim}
 
 Graphs for predictions -
@@ -1412,68 +1467,97 @@ Graphs for predictions -
     \AttributeTok{Max\_temp =} \FunctionTok{as.numeric}\NormalTok{(Max\_temp),}
     \AttributeTok{Days\_Above\_29\_44C =} \FunctionTok{as.numeric}\NormalTok{(Days\_Above\_29\_44C)}
 \NormalTok{  )}
+\end{Highlighting}
+\end{Shaded}
 
+\begin{verbatim}
+Error: object 'year_above_29' not found
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
 \CommentTok{\# Simple plot}
 \FunctionTok{ggplot}\NormalTok{(year\_above\_29, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ Year)) }\SpecialCharTok{+}
   \FunctionTok{geom\_bar}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{y =}\NormalTok{ Days\_Above\_29\_44C), }\AttributeTok{stat =} \StringTok{"identity"}\NormalTok{, }\AttributeTok{fill =} \StringTok{"deepskyblue4"}\NormalTok{) }
 \end{Highlighting}
 \end{Shaded}
 
-\pandocbounded{\includegraphics[keepaspectratio]{draft-data-doc_files/figure-pdf/unnamed-chunk-8-1.pdf}}
+\begin{verbatim}
+Error: object 'year_above_29' not found
+\end{verbatim}
 
 Max temp per year
 
 \begin{Shaded}
 \begin{Highlighting}[]
 \NormalTok{water\_model\_max }\OtherTok{\textless{}{-}} \FunctionTok{lm}\NormalTok{(Max\_temp }\SpecialCharTok{\textasciitilde{}}\NormalTok{ Year, }\AttributeTok{data =}\NormalTok{ year\_above\_29)}
+\end{Highlighting}
+\end{Shaded}
 
+\begin{verbatim}
+Error in eval(mf, parent.frame()): object 'year_above_29' not found
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
 \FunctionTok{summary}\NormalTok{(water\_model\_max)  }
 \end{Highlighting}
 \end{Shaded}
 
 \begin{verbatim}
-
-Call:
-lm(formula = Max_temp ~ Year, data = year_above_29)
-
-Residuals:
-     Min       1Q   Median       3Q      Max 
--0.99396 -0.33352 -0.08462  0.25495  1.13626 
-
-Coefficients:
-              Estimate Std. Error t value Pr(>|t|)   
-(Intercept) -309.13187   89.64533  -3.448  0.00544 **
-Year           0.16978    0.04442   3.822  0.00283 **
----
-Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-
-Residual standard error: 0.5993 on 11 degrees of freedom
-Multiple R-squared:  0.5704,    Adjusted R-squared:  0.5314 
-F-statistic: 14.61 on 1 and 11 DF,  p-value: 0.002834
+Error: object 'water_model_max' not found
 \end{verbatim}
 
 \begin{Shaded}
 \begin{Highlighting}[]
 \NormalTok{future\_data\_max }\OtherTok{\textless{}{-}} \FunctionTok{data.frame}\NormalTok{(}\AttributeTok{Year =} \FunctionTok{seq}\NormalTok{(}\FunctionTok{max}\NormalTok{(year\_above\_29}\SpecialCharTok{$}\NormalTok{Year) }\SpecialCharTok{+} \DecValTok{1}\NormalTok{, }\AttributeTok{by =} \DecValTok{1}\NormalTok{, }\AttributeTok{length.out =} \DecValTok{5}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
 
+\begin{verbatim}
+Error: object 'year_above_29' not found
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
 \CommentTok{\# Predict with confidence intervals}
 \NormalTok{future\_predictions\_max }\OtherTok{\textless{}{-}} \FunctionTok{predict}\NormalTok{(water\_model\_max, }\AttributeTok{newdata =}\NormalTok{ future\_data\_max, }\AttributeTok{interval =} \StringTok{"prediction"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
 
+\begin{verbatim}
+Error: object 'water_model_max' not found
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
 \CommentTok{\# Combine predictions with years}
 \NormalTok{forecast\_max }\OtherTok{\textless{}{-}} \FunctionTok{cbind}\NormalTok{(future\_data\_max, }\FunctionTok{round}\NormalTok{(}\FunctionTok{as.data.frame}\NormalTok{(future\_predictions\_max), }\DecValTok{1}\NormalTok{))}
-\FunctionTok{names}\NormalTok{(forecast\_max) }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\StringTok{"Year"}\NormalTok{, }\StringTok{"Predicted Highest Temp"}\NormalTok{, }\StringTok{"Lower"}\NormalTok{, }\StringTok{"Upper"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
 
+\begin{verbatim}
+Error: object 'future_data_max' not found
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{names}\NormalTok{(forecast\_max) }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\StringTok{"Year"}\NormalTok{, }\StringTok{"Predicted Highest Temp"}\NormalTok{, }\StringTok{"Lower"}\NormalTok{, }\StringTok{"Upper"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+Error: object 'forecast_max' not found
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
 \FunctionTok{print}\NormalTok{(forecast\_max)}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{verbatim}
-  Year Predicted Highest Temp Lower Upper
-1 2025                   34.7  33.1  36.2
-2 2026                   34.8  33.3  36.4
-3 2027                   35.0  33.4  36.6
-4 2028                   35.2  33.5  36.9
-5 2029                   35.4  33.6  37.1
+Error: object 'forecast_max' not found
 \end{verbatim}
 
 Graph of max temp per year
@@ -1487,7 +1571,9 @@ Graph of max temp per year
 \end{Highlighting}
 \end{Shaded}
 
-\pandocbounded{\includegraphics[keepaspectratio]{draft-data-doc_files/figure-pdf/unnamed-chunk-10-1.pdf}}
+\begin{verbatim}
+Error: object 'year_above_29' not found
+\end{verbatim}
 
 \#https://www.sciencedirect.com/science/article/pii/S2211467X24000725
 This is an article about the dangers of climate change on nuclear
@@ -1510,6 +1596,45 @@ the plant had to operate on reduced power. The amount of money it cost
 consumers is recorded as well as the temperature threshold. There are a
 couple of examples and all of them have different limits to how hot the
 water can be around their plant. (\textbf{cooling?})
+
+\chapter{Draft: Executive Summary}\label{draft-executive-summary}
+
+\chapter{Executive Summary}\label{executive-summary-1}
+
+Intro The Dauphin Island Nuclear Power Plant supplies electricity to
+hundreds of thousands of people and businesses across Alabama. Multiple
+studies have shown climate change to increase the average air
+temperature across the globe, in turn increasing ambient water
+temperature. This increasing water temperature in the Gulf of Mexico
+around Dauphin Island could harm the plant's ability to run at full
+capacity. In fact, any time the surrounding water temperature reaches
+85°F (29.44°C), the plant must run at half power to reduce negative
+environmental effects.
+
+Methods We used data from weather stations in the Dauphin Island area.
+These stations collected atmospheric data as well as water temperature
+data, the latter being what we extracted and included in our analyses.
+To clean, analyze, and present our data, we used the software package
+``R.'' In doing so, we created prjections, confidence intervals, and
+graphics that give insights into answering our research question.
+
+Results Our study found there to be a significant chance of a partial
+shutdown every year for the next five years. Generated confidence
+intervals showed years 2025-2029 are expected to have between 35 and 169
+days that reach the 29.44°C threshold, forcing the plant to reduce
+operations. {[}Text box of projected days{]} Additionally, the estimated
+maximum water temperature reached is expected to increase year over
+year. However, the intervals do include temperatures that are lower than
+the 2024 maximum. Therefore, we unfortunately cannot make a decision
+based on these intervals.
+
+Discussion Based on our results, climate resilience strategies are the
+best way to ensure this plant continues operating efficiently. We
+recommend doing more research on procedures that can mitigate the risk,
+such as sourcing colder water, finding new methods to reuse water, and
+increasing turbine efficiency. If no changes are made, many people and
+businesses in Alabama could face challenges in being able to use
+electricity.
 
 \chapter{Draft: Results}\label{draft-results}
 
@@ -1535,8 +1660,7 @@ Fahrenheit (29.44 degrees Celsius). Using public data, we created an
 analysis to find how often the water surrounding Dauphin Island reaches
 the 85 degree F threshold and above to help answer our research
 question. Below is a table of the mean water temperature each month off
-Dauphin Island ({``NCEI Coastal Water Temperature Guide - All Coastal
-Regions Table''} 2025).
+Dauphin Island (\textbf{nceicoaa?}).
 
 \begin{longtable}[]{@{}ll@{}}
 \toprule\noalign{}
@@ -1846,45 +1970,6 @@ resource issues. Rapid cooling of sea water is another interesting idea,
 but trade offs must be studied to find the feasibility of this idea.
 Upgrading existing cooling features like building a secondary cooling
 tower to make the process more efficient should be looked into as well.
-
-\chapter{Draft: Executive Summary}\label{draft-executive-summary}
-
-\chapter{Executive Summary}\label{executive-summary-1}
-
-Intro The Dauphin Island Nuclear Power Plant supplies electricity to
-hundreds of thousands of people and businesses across Alabama. Multiple
-studies have shown climate change to increase the average air
-temperature across the globe, in turn increasing ambient water
-temperature. This increasing water temperature in the Gulf of Mexico
-around Dauphin Island could harm the plant's ability to run at full
-capacity. In fact, any time the surrounding water temperature reaches
-85°F (29.44°C), the plant must run at half power to reduce negative
-environmental effects.
-
-Methods We used data from weather stations in the Dauphin Island area.
-These stations collected atmospheric data as well as water temperature
-data, the latter being what we extracted and included in our analyses.
-To clean, analyze, and present our data, we used the software package
-``R.'' In doing so, we created prjections, confidence intervals, and
-graphics that give insights into answering our research question.
-
-Results Our study found there to be a significant chance of a partial
-shutdown every year for the next five years. Generated confidence
-intervals showed years 2025-2029 are expected to have between 35 and 169
-days that reach the 29.44°C threshold, forcing the plant to reduce
-operations. {[}Text box of projected days{]} Additionally, the estimated
-maximum water temperature reached is expected to increase year over
-year. However, the intervals do include temperatures that are lower than
-the 2024 maximum. Therefore, we unfortunately cannot make a decision
-based on these intervals.
-
-Discussion Based on our results, climate resilience strategies are the
-best way to ensure this plant continues operating efficiently. We
-recommend doing more research on procedures that can mitigate the risk,
-such as sourcing colder water, finding new methods to reuse water, and
-increasing turbine efficiency. If no changes are made, many people and
-businesses in Alabama could face challenges in being able to use
-electricity.
 
 
 

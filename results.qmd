@@ -1,0 +1,3 @@
+# **Results**
+
+# ![This graph shows the daily average water temperature around Dauphin Island. The dashed line near the top of the graph is the threshold for shutdown. There are many instances of daily water temperature exceeding the maximum temperature threshold, specifically in the middle of the graph (around summer months).](images/Screenshot%202025-04-30%20165043.png "Figure 2"){#Figure 2}

@@ -1,3 +1,7 @@
+---
+bibliography: references.bib
+---
+
 # Executive Summary {.unnumbered}
 
 ## Intro
@@ -6,21 +10,21 @@ The Dauphin Island Nuclear Power Plant supplies electricity to hundreds of thous
 
 ## Methods
 
-We conducted an observational study using available temperature data from the NOAA [@NDBC] and NCEI [@nceicoa2025]. These stations collected atmospheric data as well as water temperature data, the latter being what we extracted and included in our analyses. To clean, analyze, and present our data, we used the software package "R." In doing so, we created projections, confidence intervals, and graphics that give insights into answering our research question.
+We conducted an observational study using available temperature data from the NOAA [@NDBC2025] and NCEI [@nceicoa2025]. These stations collected atmospheric data as well as water temperature data, the latter being what we extracted and included in our analyses. To clean, analyze, and present our data, we used the software program "R Studio" [@RStudio]. In doing so, we created projections, confidence intervals, and graphics that give insights into answering our research question.
 
 ## Results
 
-Our study found there to be a significant chance of a partial shutdown every year for the next five years. Generated confidence intervals showed years 2025-2029 are expected to have between 35 and 169 days that reach the 85°F threshold, forcing the plant to reduce operations.
+Our study found there to be a significant chance of a partial shutdown every year for the next five years. Generated 95 percent confidence intervals showed years 2025-2029 are expected to have between 35 and 169 days that reach the 85°F threshold, forcing the plant to reduce operations.
 
 | Year | Predicted Number of Days | Lower Confidence Limit | Upper Confidence Limit |
-|-----------------|-------------------|------------------|------------------|
+|------|--------------------------|------------------------|------------------------|
 | 2025 | 99.3                     | 40.8                   | 157.8                  |
 | 2026 | 100.2                    | 39.9                   | 160.5                  |
 | 2027 | 101.1                    | 38.9                   | 163.3                  |
 | 2028 | 101.9                    | 37.6                   | 166.2                  |
 | 2029 | 102.8                    | 36.2                   | 169.3                  |
 
-: The number of projected days that reach 85°F over the next five years. Since each lower confidence limit is above 30, we would expect there to be at least 30 days every year that would require the plant to reduce operations. Additionally, we found the estimated maximum water temperature reached is expected to increase year over year. However, the intervals include temperatures that are lower than the 2024 maximum. Therefore, we unfortunately cannot make a decision based on those intervals.
+: Figure 1: This table gives the number of projected days that reach 85°F over the next five years. Since each lower confidence limit is above 30, we would expect there to be at least 30 days every year that would require the plant to reduce operations. Additionally, we found the estimated maximum water temperature reached is expected to increase year over year. However, the intervals include temperatures that are lower than the 2024 maximum. Therefore, we unfortunately cannot make a decision based on those intervals.
 
 ## Discussion
 

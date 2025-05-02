@@ -5,7 +5,9 @@ editor:
     wrap: 72
 ---
 
-### Source 1
+## Data Documentation {#data-doc}
+
+### Source 1 - NCEI
 
 #https://www.ncei.noaa.gov/access/coastal-water-temperature-guide/all_table.html#
 This gives average monthly temperature of the water off Dauphin island.
@@ -18,7 +20,8 @@ likelihood of water temps reaching the 85 degree threshold in different
 months. Unfortunately, it doesn't have daily data, so we'd look
 elsewhere for that. [@nceicoa]
 
-#read fwf to fix the data we read in#
+### Source 2 - NDBC
+
 https://www.ndbc.noaa.gov/obs.shtml Click on link to get to map. Click
 on view history. Then can download any data wanted dpha12024.txt. This
 site has real data every half hour for all of 2024 that comes directly
@@ -28,25 +31,23 @@ finding the likelihood of water temps reaching 85 degrees (or 29.44
 degrees Celcius). @nceicoa
 
 ```{R}
-setwd("C:/Users/Dominic Sander/Downloads/Stat 349")
 library(readr)
-dpha2h2012 <- read_table("dpha1h2012.txt")
-dpha2h2013 <- read_table("dpah1h2013.txt")
-dpha2h2014 <- read_table("dpha1h2014.txt")
-dpha2h2015 <- read_table("dpha1h2105.txt")
-dpha2h2016 <- read_table("dpha2h2016.txt")
-dpha2h2017 <- read_table("dpha2h2017.txt")
-dpha2h2018 <- read_table("dpha2h2018.txt")
-dpha2h2019 <- read_table("dpha2h2019.txt")
-dpha2h2020 <- read_table("dpha2h2020.txt")
-X42012h2021 <- read_table("42012h2021.txt")
-dpha2h2022 <- read_table("dpha2h2022.txt")
-dpha2h2023 <- read_table("dpha2h2023.txt")
-dpha2h2024 <- read_table("dpha2h2024.txt")
+dpha2h2012 <- read_table("data/dpha1h2012.txt")
+dpha2h2013 <- read_table("data/dpah1h2013.txt")
+dpha2h2014 <- read_table("data/dpha1h2014.txt")
+dpha2h2015 <- read_table("data/dpha1h2105.txt")
+dpha2h2016 <- read_table("data/dpha2h2016.txt")
+dpha2h2017 <- read_table("data/dpha2h2017.txt")
+dpha2h2018 <- read_table("data/dpha2h2018.txt")
+dpha2h2019 <- read_table("data/dpha2h2019.txt")
+dpha2h2020 <- read_table("data/dpha2h2020.txt")
+X42012h2021 <- read_table("data/42012h2021.txt")
+dpha2h2022 <- read_table("data/dpha2h2022.txt")
+dpha2h2023 <- read_table("data/dpha2h2023.txt")
+dpha2h2024 <- read_table("data/dpha2h2024.txt")
 
 
 ```
-
 
 ```{R setup}
 library(dplyr)
@@ -107,6 +108,7 @@ dpha_combined <- bind_rows(dpha2_12, dpha2_13, dpha2_14, dpha2_15, dpha2_16, dph
 ```
 
 Create dataset for av temp
+
 ```{R}
 dpha_av <- dpha_combined %>%
   mutate(WTMP = as.numeric(WTMP)) %>%
@@ -120,6 +122,7 @@ dpha_over85 <- dpha_av %>%
 ```
 
 Graph of av. temp by day
+
 ```{R}
 colnames(dpha_av)
 dpha_av <- dpha_av %>%
@@ -128,7 +131,7 @@ dpha_av <- dpha_av %>%
 ggplot(dpha_av, aes(x = factor(paste(MM, DD, sep = "-")), y = Avg_WTMP)) +
   geom_bar(stat = "identity", fill = "deepskyblue4") + 
   geom_hline(yintercept = 29.44, linetype = "dashed", color = "red") +
-  labs(x = "Day", y = "Av. Water Temp °C", title = "Daily Av. Water Temp 2012-2024") +
+  labs(x = "Day: Jan. 1 - Dec. 31", y = "Av. Water Temp °C", title = "Daily Av. Water Temp 2012-2024") +
   theme(axis.text.x = element_blank(),  
         axis.ticks.x = element_blank(), 
         plot.title = element_text(hjust = 0.5))
@@ -136,6 +139,7 @@ ggplot(dpha_av, aes(x = factor(paste(MM, DD, sep = "-")), y = Avg_WTMP)) +
 ```
 
 Total Days Per Month With Av. Over 29.44
+
 ```{R}
 
 month_count <- dpha_over85 %>%
@@ -148,7 +152,8 @@ kable(month_count)
 
 ```
 
-Total Days Per Month With Obs. > 29.44 in 2024
+Total Days Per Month With Obs. \> 29.44 in 2024
+
 ```{R}
 dpha2_24_29 <- dpha2_24 %>%
   filter(WTMP >= 29.44) %>%
@@ -162,6 +167,7 @@ kable(month_obs, caption="Total Days Per Month With an Obs. > 29.44° C", col.na
 ```
 
 Total days per year with daily max temp above 29.44
+
 ```{R}
 library(lubridate)
 dpha_combined <- dpha_combined %>%
@@ -179,8 +185,8 @@ year_above_29 <- dpha_combined %>%
     )
 ```
 
-
 Predictive model for next five years
+
 ```{R}
 water_model <- lm(Days_Above_29_44C ~ Year, data = year_above_29)
 
@@ -199,7 +205,8 @@ names(forecast) <- c("Year", "Predicted_Hot_Days", "Lower", "Upper")
 print(forecast)
 ```
 
-Graphs for predictions - 
+Graphs for predictions -
+
 ```{R}
 year_above_29 <- year_above_29 %>%
   mutate(
@@ -214,6 +221,7 @@ ggplot(year_above_29, aes(x = Year)) +
 ```
 
 Max temp per year
+
 ```{R}
 water_model_max <- lm(Max_temp ~ Year, data = year_above_29)
 
@@ -233,6 +241,7 @@ print(forecast_max)
 ```
 
 Graph of max temp per year
+
 ```{R}
 ggplot(year_above_29, aes(x=Year, y=Max_temp)) +
   geom_line() +
@@ -240,8 +249,6 @@ ggplot(year_above_29, aes(x=Year, y=Max_temp)) +
   labs(x = "Year", y = "Max. Water Temp °C", title = "Max. Yearly Water Temp 2012-2024") 
   
 ```
-
-
 
 #https://www.sciencedirect.com/science/article/pii/S2211467X24000725
 This is an article about the dangers of climate change on nuclear
