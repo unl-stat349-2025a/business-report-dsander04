@@ -15,6 +15,7 @@ book:
     - discussion.qmd
     - references.qmd
   appendices:
+    - r-packages-used.qmd
     - draft-data-doc.qmd
     - draft-exec-summary.qmd
     - draft-results.qmd

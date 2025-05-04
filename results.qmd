@@ -1,3 +1,17 @@
 # **Results**
 
-# ![This graph shows the daily average water temperature around Dauphin Island. The dashed line near the top of the graph is the threshold for shutdown. There are many instances of daily water temperature exceeding the maximum temperature threshold, specifically in the middle of the graph (around summer months).](images/Screenshot%202025-04-30%20165043.png "Figure 2"){#Figure 2}
+In our data collection, we found 94 days in 2024 would have had to reduce operations at the Power Plant. By cutting power on 25.68% of the days, the surrounding areas that rely on the plant for power are now looking at losing power or having to drastically cut down on their electricity usage. Using predictive models and confidence intervals, we can predict the number of "shutdown days" over the next five years. The chart below gives those limits as well as the predicted number of shutdown days. For example, in 2025, we are 95% confident the true number of observed days that water temperature reaches 85° F is between 40.8 and 157.8. The predicted number of days appears to be increasing by about 1 day per year. However, the lower confidence limit is decreasing while the upper confidence limit is increasing, so we cannot definitively determine whether the number of days per year is increasing, decreasing, or staying the same. More data collection from years prior to 2012 would be a great way to attempt shrinking the confidence intervals.
+
+**Figure 1. Predicted Number of Hot Days**
+
+| Year | Predicted Number of Days | Lower Confidence Limit | Upper Confidence Limit |
+|-----------------|-------------------|------------------|------------------|
+| 2025 | 99.3                     | 40.8                   | 157.8                  |
+| 2026 | 100.2                    | 39.9                   | 160.5                  |
+| 2027 | 101.1                    | 38.9                   | 163.3                  |
+| 2028 | 101.9                    | 37.6                   | 166.2                  |
+| 2029 | 102.8                    | 36.2                   | 169.3                  |
+
+We also wanted to find the average water temperature for each day to track potential long-term outages. As is suspected, the summer months had the most days with water temperatures averaging 85° and higher. Utilizing the data we collected, we found August to have the highest average number of days per year that exceeded 85° with 25. July was close behind at 24 days, while September and June had 2 days a piece. To make this easier to see, we graphed the average water temperature for each day in a bar chart. The dashed red line is the 85° threshold, so any bars that reach above that are days that would be heavily expected to require a shutdown.
+
+![This graph shows the daily average water temperature around Dauphin Island. The dashed line near the top of the graph is the threshold for shutdown. There are many instances of daily water temperature exceeding the maximum temperature threshold, specifically in the middle of the graph (around summer months).](images/Screenshot%202025-04-30%20165043.png "Figure 2"){#Figure-2}

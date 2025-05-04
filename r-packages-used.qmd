@@ -1,0 +1,29 @@
+# R Packages Used
+
+***readr*** [@readr2024]
+
+This library was used to read the data we had collected into R so it could be transformed and manipulated for our analyses. It took the text files we had found and turned them into the data sets we worked with.
+
+***dplyr*** [@dplyr2023]
+
+Dplyr was one of the most used libraries in this report. Its many functions allowed us to change formatting and information displayed to better suit our needs. Some examples of functions used are:
+
+-   *rename*
+
+This allowed us to rename columns so we could combine them into one large data set.
+
+-   *select*
+
+Select gives us the ability to choose which columns we want to keep, and which we want to remove.
+
+-   *group_by & summarize*
+
+These two functions were used together to accurately compute the average water temperature by day, month, or year depending on what we wanted to group by.
+
+***ggplot2*** [@ggplot22016]
+
+The ggplot2 library helped us create all plots using ggplot, aes(), and geom_bar functions.
+
+***lubridate*** [@lubridate2011]
+
+Lubridate helped us separate date columns into year, month, and date so we could easily filter and plot our data.

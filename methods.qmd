@@ -1,39 +1,9 @@
 # Methods
 
-No new data collection was done in our observational study. Everything we found came from reliable outside sources such as the NOAA and NCEI. This information was gathered by weather posts in and around Dauphin Island, measuring ambient water temperature and other important meteorological observations. All data sets used were posted as free to access text files to the NOAA and NCEI websites, organized by weather station and year. We focused only on day, month, year, and water temperature in our analysis.
+No new data were collected in our observational study. Everything we found came from reliable outside sources such as the NOAA and NCEI. This information was gathered by weather stations in and around Dauphin Island, measuring ambient water temperature and other important meteorological observations. All data sets used were posted as free to access text files to the NOAA and NCEI websites, organized by weather station and year. We focused only on day, month, year, and water temperature in our analysis.
 
-In our analysis, we used the software "R" to clean, visualize, and examine our information. We created multiple tables to examine daily average temperatures, yearly maximum temperatures, and prevalence of days that exceed our thresholds. We also graphed some results to make them more digestible for a wider audience. For more information on data used, see @data-doc in the appendix.
+In our analysis, we used the software *R* to clean, visualize, and examine our information. We created multiple tables to examine daily average temperatures, yearly maximum temperatures, and prevalence of days that exceed our thresholds. We also graphed some results to make them more digestible for a wider audience. For more information on data used, see @sec-data-doc in the appendix.
 
 ## Data Cleaning and Missing Data
 
-After collecting all necessary data, we created a new data set that would be easier to deal with for all future investigations. This data set only included columns with date and time information, and water temperature in degrees Celsius. Once we had completed this step, we had to then remove any observations with missing data. In this case, all observations with missing data were marked as "999" or "99", so we filtered out all datum with "999" or "99" in the water temperature column. Fortunately, there were still more than twenty observations spread throughout every day in each data file we used, so we didn't have to worry about missing days or inaccurate results.
-
-## R Libraries Used
-
-***readr*** [@readr2024]
-
-This library was used to read the data we had collected into R so it could be transformed and manipulated for our analyses. It took the text files we had found and turned them into the data sets we worked with.
-
-***dplyr*** [@dplyr2023]
-
-Dplyr was one of the most used libraries in this report. Its many functions allowed us to change formatting and information displayed to better suit our needs. Some examples of functions used are:
-
-`rename`
-
-This allowed us to rename columns so we could combine them into one large data set.
-
-`select`
-
-Select gives us the ability to choose which columns we want to keep, and which we want to remove.
-
-`group_by & summarize`
-
-These two functions were used together to accurately compute the average water temperature by day, month, or year depending on what we wanted to group by.
-
-***ggplot2*** [@ggplot22016]
-
-The ggplot2 library helped us create all plots using ggplot, aes(), and geom_bar functions.
-
-***lubridate*** [@lubridate2011]
-
-Lubridate helped us separate date columns into year, month, and date so we could easily filter and plot our data.
+After collecting all necessary data, we created a new data set that would be easier to deal with for all future investigations. This data set only included columns with date and time information, and water temperature in degrees Celsius. Once we had completed this step, we had to then remove any observations with missing data. In this case, all observations with missing data were marked as "999" or "99", so we filtered out all entries with "999" or "99" in the water temperature column. Before any data cleaning, there were 288,915 observations over the 13 years collected. After filtering, 236,000 observations remained meaning we kept 81.68% of our original data. 52,915 data points making up 18.32% of our data were removed. Fortunately, there were still more than twenty observations spread throughout every day in each data file we used, so we didn't have to worry about missing days or inaccurate results.

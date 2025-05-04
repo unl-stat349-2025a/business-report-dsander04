@@ -6,26 +6,26 @@ bibliography: references.bib
 
 ## Intro
 
-The Dauphin Island Nuclear Power Plant supplies electricity to hundreds of thousands of people and businesses across Alabama. Multiple studies have shown climate change to increase the average air temperature across the globe, in turn increasing ambient water temperature. This increasing water temperature in the Gulf of Mexico around Dauphin Island could harm the plant's ability to run at full capacity. In fact, any time the surrounding water temperature reaches 85°F (29.44°C), the plant is required to run at half power to reduce negative environmental effects.
+The Dauphin Island Nuclear Power Plant supplies electricity to hundreds of thousands of people and businesses across Alabama. Multiple studies have shown that climate change increases the average air temperature across the globe, in turn increasing ambient water temperature. Rising water temperature in the Gulf of Mexico around Dauphin Island could harm the plant's ability to run at full capacity. In fact, whenever the surrounding water temperature reaches 85°F (29.44°C), the plant is required to run at half power to reduce negative environmental effects.
 
 ## Methods
 
-We conducted an observational study using available temperature data from the NOAA [@NDBC2025] and NCEI [@nceicoa2025]. These stations collected atmospheric data as well as water temperature data, the latter being what we extracted and included in our analyses. To clean, analyze, and present our data, we used the software program "R Studio" [@RStudio]. In doing so, we created projections, confidence intervals, and graphics that give insights into answering our research question.
+We conducted an observational study using available temperature data from the NOAA [@NDBC2025] and NCEI [@nceicoa2025]. These stations collected atmospheric data as well as water temperature data, the latter being what we extracted and included in our analyses. To clean, analyze, and present our data, we used the software program *RStudio* [@RStudio2023]. In doing so, we created projections, confidence intervals, and graphics that give insights into answering our research question.
 
 ## Results
 
-Our study found there to be a significant chance of a partial shutdown every year for the next five years. Generated 95 percent confidence intervals showed years 2025-2029 are expected to have between 35 and 169 days that reach the 85°F threshold, forcing the plant to reduce operations.
+This study found there to be a significant chance of a partial shutdown every year for the next five years. Generated 95% confidence intervals showed years 2025-2029 are expected to have between 35 and 169 days that reach the 85°F threshold, forcing the plant to reduce operations.
 
 | Year | Predicted Number of Days | Lower Confidence Limit | Upper Confidence Limit |
-|------|--------------------------|------------------------|------------------------|
+|---------------|--------------------|-------------------|-------------------|
 | 2025 | 99.3                     | 40.8                   | 157.8                  |
 | 2026 | 100.2                    | 39.9                   | 160.5                  |
 | 2027 | 101.1                    | 38.9                   | 163.3                  |
 | 2028 | 101.9                    | 37.6                   | 166.2                  |
 | 2029 | 102.8                    | 36.2                   | 169.3                  |
 
-: Figure 1: This table gives the number of projected days that reach 85°F over the next five years. Since each lower confidence limit is above 30, we would expect there to be at least 30 days every year that would require the plant to reduce operations. Additionally, we found the estimated maximum water temperature reached is expected to increase year over year. However, the intervals include temperatures that are lower than the 2024 maximum. Therefore, we unfortunately cannot make a decision based on those intervals.
+: Figure 1: This table gives the number of projected days that reach 85°F over the next five years. Because each lower confidence limit is above 30, we would expect there to be at least 30 days every year that would require the plant to reduce operations. Additionally, the estimated maximum water temperature reached is expected to increase year over year. However, the intervals include temperatures that are lower than the 2024 maximum, so no definitive conclusion can be made based on those intervals.
 
 ## Discussion
 
-Based on our results, climate resilience strategies are the best way to ensure this plant continues operating efficiently. We recommend doing more research on procedures that can mitigate the risk, such as sourcing colder water, finding new methods to reuse water, and increasing turbine efficiency. If no changes are made, many people and businesses in Alabama could face challenges in being able to use electricity.
+Based on all results, climate resilience strategies are the best way to ensure this plant continues operating efficiently. We recommend doing more research on procedures that can mitigate the risk, such as sourcing colder water, finding new methods to reuse water, and increasing turbine efficiency. If no changes are made, many people and businesses in Alabama could face challenges in being able to use electricity.
